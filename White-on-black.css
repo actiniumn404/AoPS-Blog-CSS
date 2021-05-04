@@ -31,10 +31,6 @@
 	color: var(--coolblue) !important;
 }
 
-.description::before {
-	content: "An AoPS blog for\A";
-}
-
 .description {
 	position: absolute;
 	top: 150px;
