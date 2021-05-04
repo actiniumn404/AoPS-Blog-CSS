@@ -1,0 +1,503 @@
+/*
+*White On Black.css by AndrewC10
+*
+*ZAP.css (ZhaoM,  AndrewC10, Palaashgang) for some components, The Latest (JDKim) for the cool nav bar, Goodbye.css (Mathlete2017) for the cool sidebar for mobile.
+*
+*https://github.com/actiniumn404/White-on-black.css || Released under MIT licence
+*
+*Enjoy!
+*
+*<--->
+*/
+
+* {
+	--coolblue: #05a1af;
+}
+
+#header {
+	background-color: black;
+	height: 300px;
+	border: none;
+	font-size: 48px;
+}
+
+#header h1 {
+	position: absolute;
+	text-align: left !important;
+	font-size: 4vw;
+	margin-top: 100px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--coolblue) !important;
+}
+
+.description::before {
+	content: "An AoPS blog for\A";
+}
+
+.description {
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	font-size: 18px;
+}
+
+#side {
+	background-color: black;
+}
+
+#left_navigation_box {
+	float: none;
+	position: absolute;
+	text-align: center;
+	top: 220px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+#right_navigation_box {
+	float: none;
+	position: absolute;
+	text-align: center;
+	top: 230px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+#left_navigation_box>a {
+	color: #4d4d4d !important;
+}
+
+#navigation_box>div>a {
+	padding: 2px;
+	font-size: 16px;
+	transition: 0.7s;
+}
+
+#navigation_box>div {
+	color: transparent;
+}
+
+#right_navigation_box>a {
+	color: #9c9c9c !important;
+	margin: 20px;
+}
+
+#navigation_box {
+	background-color: transparent;
+	border: none !important;
+}
+
+.aops-modal-wrapper {
+	z-index: 1000000000000000000000000000000000000000000000000000000 !important;
+}
+
+a:hover {
+	color: #FFFFFF !important;
+	background-color: var(--coolblue);
+	transition: 0.7s;
+	font-weight: bolder;
+}
+
+a {
+	transition: 0.7s;
+	padding: 5px;
+}
+
+.bbcode_url {
+	border-bottom: 3px dashed #0066CC;
+}
+
+div#wrapper {
+	width: 100%;
+	height: inherit;
+	background-color: black;
+	border: none !important;
+}
+
+#content {
+	background-color: black;
+}
+
+div#main {
+	width: 80%;
+}
+
+.entrywrap {
+	border: 2px white solid !important;
+	background-color: black !important;
+	color: lightgray;
+	box-shadow: 0px 0px 16px white;
+}
+
+/*.month-image{height:0px;width:0px;}*/
+.widget-title {
+	background-color: var(--coolblue);
+	padding: 5px;
+	color: white;
+	font-weight: bolder;
+	width: 240px;
+	margin-left: 2px;
+	font-size: 14px;
+}
+
+img.latex,
+img.latexcenter,
+img.asy-image {
+	filter: invert(1) grayscale(1);
+}
+
+.archive-widget {
+	background-color: transparent;
+}
+
+/*By AndrewC10, inspired by Libre.css*/
+#contrib-widget>.widget-header>.widget-title::before {
+	content: "u ";
+	font-family: aops;
+	font-size: 24px !important;
+}
+
+#shouts-widget>.widget-header>.widget-title::before {
+	content: "t ";
+	font-family: aops;
+	font-size: 20px !important;
+}
+
+.widget-title:nth-of-type(4)::before {
+	content: "B ";
+	font-family: aops;
+	font-size: 20px !important;
+}
+
+#archive-widget>.widget-header>.widget-title::before {
+	content: "p ";
+	font-family: aops;
+	font-size: 20px !important;
+}
+
+#about-owner-widget>.widget-header>.widget-title::before {
+	content: "w ";
+	font-family: aops;
+	font-size: 20px !important;
+}
+
+#stats-widget>.widget-header>.widget-title::before {
+	content: "9 ";
+	font-family: aops;
+	font-size: 20px !important;
+}
+
+#search-widget>.widget-header>.widget-title::before {
+	content: "M ";
+	font-family: aops;
+	font-size: 20px !important;
+}
+
+.archive-month-header {
+	color: gray;
+	margin-left: 1vw;
+}
+
+.archive-row {
+	margin-left: 1vw;
+}
+
+/*Very fancy tags selector*/
+#side>div:nth-child(4)>.widget-header>.widget-title:before {
+	content: "C ";
+	font-family: aops;
+}
+
+.post-replies:before {
+	content: "t  ";
+	font-family: aops;
+	font-size: 14px;
+}
+
+.post-comment:before,
+.blog-post-comment:before {
+	content: "V  ";
+	font-family: aops;
+	font-size: 14px;
+}
+
+.post-replies,
+.post-comment {
+	font-size: 0;
+	text-decoration: none;
+}
+
+/*For search*/
+#search-widget>.widget-settings,
+#search-widget>.widget-footer {
+	display: none;
+}
+
+#blog_searchform>fieldset {
+	border: none;
+}
+
+input.button2[type=submit] {
+	width: 230px;
+	padding: 5px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+#main::before {
+	content: "\43 \53 \53 \20 \6d \61 \64 \65 \20 \62 \79 \20 \41 \6e \64 \72 \65 \77 \43 \31 \30 \20 \77 \69 \74 \68 \20 \2665\2e \20  \49 \66 \20 \79 \6f \75 \20 \73 \65 \65 \20 \74 \68 \69 \73 \20 \6f \6e \20 \73 \6f \6d \65 \6f \6e \65 \20 \65 \6c \73 \65 \27 \73 \20 \62 \6c \6f \67 \20 \77 \69 \74 \68 \6f \75 \74 \20 \70 \65 \72 \6d \6d \69 \73 \69 \6f \6e \2c \20 \74 \65 \6c \6c \20 \74 \68 \65 \6d \20 \74 \68 \61 \74 \20 \74 \68 \65 \79 \20 \61 \72 \65 \20 \61 \20 \42 \41 \44 \20 \70 \65 \72 \73 \6f \6e";
+	color: white;
+	font-size: 18px;
+}
+
+/*From circut.css via ZAP*/
+input.button2 {
+	background: linear-gradient(90deg, #1464f4 50%, #999999 50%);
+	background-size: 400% 100%;
+	background-position: 100% 0%;
+	transition: 1s;
+}
+
+input.button2:hover {
+	background-position: 0% 0%;
+	color: white;
+}
+
+#charsleft,
+#submit {
+	color: white !important;
+}
+
+#stats-widget>.widget-content,
+#about-owner-widget>.widget-content {
+	color: darkgray;
+}
+
+#blog_keywords {
+	width: 230px;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+#search-widget>.widget-content {
+	background-color: transparent;
+}
+
+#search-widget>div.widget-header {
+	background-color: transparent;
+}
+
+#navigation_box::before {
+	content: url("https://artofproblemsolving.com/assets/images/logos/aops-online.svg");
+	float: left;
+}
+
+#shouts-widget>.widget-header>.widget-title {
+	font-size: 0px;
+}
+
+#shouts-widget>.widget-header>.widget-title::after {
+	content: " The Chat Box";
+	font-size: 14px !important;
+}
+
+@media screen and (max-width: 1310px) {
+	#side {
+		position: fixed;
+		top: 0;
+		left: -23em;
+		width: 22em;
+		background: #212121;
+		height: 100%;
+		padding: 0 2em;
+		z-index: 1384710328740192837401983740918237401982374109823740193827120901928374102300;
+		overflow-y: scroll;
+		-webkit-transition-property: left;
+		transition-property: left;
+		-webkit-transition: .9s ease;
+		transition: .9s ease;
+	}
+	
+	#side:after {
+		content: "»";
+		position: fixed;
+		top: 60px;
+		left: 0;
+		background: var(--coolblue);
+		color: white;
+		border: 1px solid black;
+		display: block !important;
+		font-size: 2em;
+		padding: 0.35em 0.4em;
+		height: 1.5em;
+		width: 1.5em;
+		border-radius: 0 1em 1em 0;
+		-webkit-transition-property: left;
+		transition-property: left;
+		-webkit-transition: .7s ease;
+		transition: .7s ease;
+	}
+	
+	#side:hover {
+		left: 0;
+		-webkit-transition: .9s ease;
+		transition: .9s ease;
+	}
+	
+	#side:hover:after {
+		left: -1.5em;
+		-webkit-transition: .7s ease;
+		transition: .7s ease;
+	}
+	
+	div#main {
+		width: 100%;
+	}
+	
+	.description {
+		display: none;
+	}
+	
+	#search-widget {
+		display: block;
+	}
+}
+
+html {
+	background-color: black;
+}
+
+.cmty-poll-display {
+	background-color: transparent;
+	box-shadow: 0px 0px 16px white;
+	border-color: white !important;
+}
+
+pre,
+.blog-shout-wrapper,
+.blog-tags-wrapper,
+.bbcode_quote,
+.cmty-hide-content {
+	background-color: transparent !important;
+	border: 2px solid white;
+	box-shadow: 0px 0px 16px white;
+}
+
+.aops-modal-frame {
+	background-color: black !important;
+	border: 2px solid white;
+	box-shadow: 0px 0px 16px white;
+	color: lightgray !important;
+}
+
+.blog-shout {
+	border: 1px solid white;
+	box-shadow: 0px 0px 16px white;
+}
+
+.bbcode_quote_head,
+.bbcode_quote::after {
+	background-color: transparent !important;
+	color: lightgray !important;
+}
+
+.bbcode_quote {
+	color: lightgray !important;
+}
+
+.aops-modal-footer {
+	background-color: black;
+}
+
+#post-new-entry-img,
+.cmty-hide-content::after {
+	display: none;
+}
+
+.cmty-hide-content {
+	color: darkgray !important;
+}
+
+#post-new-entry {
+	background-color: #212b5e;
+	color: white;
+}
+
+.active-out.active-out-hidden {
+	color: darkgray;
+	background-color: black;
+}
+
+textarea {
+	background-color: #333 !important;
+	color: darkgray !important;
+}
+
+/*Login stuff. By AndrewC10*/
+#login-username:not(focus),
+#login-password:not(focus) {
+	background-color: #333;
+	transition: 0.5s;
+}
+
+#login-username::placeholder,
+#login-password::placeholder {
+	color: darkgray;
+}
+
+#login-username:focus,
+#login-password:focus {
+	background-color: white;
+	transition: 0.5s;
+}
+
+.aops-modal-frame.aops-modal-vert-scroll,
+#login-form {
+	background-color: #1f1f1f;
+}
+
+#login-form-links,
+#login-form>.info {
+	background-color: black;
+}
+
+div.info,
+.form-group>div>label,
+.form-group>div>div>label>span {
+	color: darkgray !Important;
+}
+
+.cmty-post-preview {
+	background-color: black !important;
+	color: lightgray;
+}
+
+/* Shouts scrollbar patch by happycupcake */
+.blog-shout-wrapper>.aops-scroll-outer>.aops-scroll-inner {
+	scrollbar-width: none;
+}
+
+.blog-shout-wrapper>.aops-scroll-outer>.aops-scroll-inner::-webkit-scrollbar {
+	width: 0px;
+}
+
+.blog-shout.row1 {
+	background-color: black;
+}
+
+.blog-shout.row2 {
+	background-color: #2b2b2b;
+}
+
+.blog-shout {
+	color: gray;
+}
+
+.cmty-post-edit-info {
+	visibility: hidden;
+}
