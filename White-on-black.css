@@ -378,7 +378,8 @@ pre,
 .blog-shout-wrapper,
 .blog-tags-wrapper,
 .bbcode_quote,
-.cmty-hide-content {
+.cmty-hide-content,
+.comment{
 	background-color: transparent !important;
 	border: 2px solid white;
 	box-shadow: 0px 0px 16px white;
