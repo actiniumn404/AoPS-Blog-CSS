@@ -12,6 +12,7 @@
 
 * {
 	--coolblue: #05a1af;
+	border-radius:10px !important;
 }
 
 #header {
@@ -21,7 +22,7 @@
 	font-size: 48px;
 }
 
-#header h1 {
+#header a h1 {
 	position: absolute;
 	text-align: left !important;
 	font-size: 4vw;
@@ -224,7 +225,6 @@ img.asy-image {
 
 .post-replies,
 .post-comment {
-	font-size: 0;
 	text-decoration: none;
 }
 
@@ -404,6 +404,7 @@ pre,
 
 .bbcode_quote {
 	color: lightgray !important;
+	border-radius:14.5px;
 }
 
 .aops-modal-footer {
