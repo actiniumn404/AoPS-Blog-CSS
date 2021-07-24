@@ -1,0 +1,338 @@
+/*
+* Google Search.css by AndrewC10. 
+*
+* Credit to Pog for the post limitation 
+*
+* Released under MIT license
+*
+* Google Search.css is not affiliated in any way with Google LLC.
+*/
+body {
+	overflow: auto;
+}
+
+div#wrapper {
+	width: 100%;
+}
+
+#navigation_box {
+	background-color: transparent;
+	border: none;
+	color: transparent;
+	width: 100%;
+}
+
+#side {
+	z-index: 100000;
+	border-radius:8px;
+}
+
+#navigation_box>div {
+	color: transparent;
+	float: left;
+	margin-right: 20px;
+	margin-top: 80px;
+}
+#left_navigation_box>a:nth-of-type(3){
+	color: #1a73e8 !important;
+	border-bottom:3px #1a73e8 solid;
+	padding-bottom:10px;
+}
+#navigation_box>div>a {
+	color: #5f6368 !important;
+	font-weight: 500;
+	font-size: 14px;
+	z-index: 50 !important;
+}
+
+#blog_keywords {
+	position: absolute;
+	top: -1745px;
+	left: 150px;
+	height: 44px !important;
+	padding: 10px;
+	border-radius: 20px;
+	width: 650px;
+	z-index: 50;
+	box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+#navigation_box::before {
+	content: "   ";
+	background-image: url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png");
+	float: left;
+	background-size: 92px 30px;
+	height: 30px;
+	width: 92px;
+	margin-top: 32px;
+	margin-left: 20px;
+	background-repeat: no-repeat;
+}
+
+#header {
+	background-color: transparent;
+	padding-bottom: 15px;
+	height: 170px;
+	border: none;
+	overflow: hidden;
+	position: absolute;
+}
+#post-new-entry-p{
+	position:absolute;
+	left:20px;
+	top:180px;
+}
+.aops-modal-wrapper {
+	z-index: 1000000000000000000000000 !important;
+}
+
+#main {
+	width: 667px;
+	margin-left: 150px;
+}
+
+#left_navigation_box {
+	margin-left: 50px;
+}
+
+#side {
+	margin-right: 150px;
+	border: 1px solid gray;
+	padding: 15px;
+	padding-top: 20px;
+}
+
+/*Limits credit to pog*/
+#main>div:first-of-type:nth-last-of-type(3) .message,
+.comment .message {
+	max-height: none !important;
+}
+
+.message {
+	max-height: 40px !important;
+	overflow: hidden;
+}
+
+#main>div:first-of-type:nth-last-of-type(3) .cmty-poll-display {
+	max-height: none !important;
+}
+
+.cmty-poll-display {
+	max-height: 20px;
+	overflow: hidden;
+}
+
+.cmty-post-edit-info {
+	display: none !important;
+}
+
+#main>div:first-of-type:nth-last-of-type(3) .cmty-post-attachments,
+.comment .cmty-post-attachments {
+	display: block !important
+}
+
+.cmty-post-attachments {
+	display: none !important
+}
+
+/*Limits end*/
+.cmty-tags-itembox-wrapper::after {
+	content: "Go to link to view full search result";
+	color:red;
+	text-decoration:underline;
+}
+
+div.entrywrap {
+	background-color: transparent;
+	border: none;
+}
+
+#header>a>h1 {
+	position: absolute;
+	z-index: 100000000000000000;
+	right: 200px;
+	top: 90px;
+	font-size: 20px;
+}
+
+#content {
+	background-color: white;
+	margin-top: 132px;
+}
+.description {
+	border-top: 1px solid gray;
+	height:121px;
+	overflow:auto;
+}
+
+.description::after {
+	content: "... AoPS Wiki";
+	color: #1a0dab;
+	cursor: pointer;
+}
+
+#shouts-widget>.widget-header>.widget-title::before {
+	content: "Leave a review! - ";
+}
+
+.blog-shout::before {
+	content: "⭐⭐⭐⭐⭐";
+}
+
+.blog-shout {
+	height: auto;
+}
+
+#shout-helper {
+	display: block !important;
+}
+
+#message {
+	resize: none;
+	width: 230px;
+	left: 100px;
+}
+
+#stats-widget>.widget-content>ul>li:nth-of-type(3) {
+	position: absolute;
+	top: -1560px;
+	list-style-type: none;
+	float: left;
+	left: 156px;
+}
+
+#stats-widget>.widget-content>ul>li:nth-of-type(1) {
+	position: absolute;
+	top: -1560px;
+	list-style-type: none;
+	float: left;
+	left: 300px;
+}
+
+#stats-widget>.widget-content>ul>li:nth-of-type(3)::after {
+	content: "visits found since"
+}
+
+#stats-widget>.widget-content>ul>li:nth-of-type(3)>strong,
+#stats-widget>.widget-content>ul>li:nth-of-type(1)>strong {
+	display: none;
+}
+
+#blog_searchform,
+#blog_searchform>fieldset,
+#blog_searchform>fieldset>div>input.button2 {
+	position: absolute;
+	left: 0px;
+	width: 0px !important;
+	height: 0px !important;
+	border: none;
+}
+
+#stats-widget>.widget-content>ul {
+	position: absolute;
+	left: 0px;
+}
+
+#stats-widget>.widget-content>ul>li {
+	position: relative;
+	left: calc(100vw - 425px);
+	width: 200px;
+}
+
+#search-widget>.widget-header {
+	display: none;
+}
+
+/*#navigation_box::after {
+	position: absolute;
+	content: "   ";
+	background-image: url("https://avatar.artofproblemsolving.com/no-avatar.png");
+	background-size: 50px 50px;
+	float: right;
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+	right: -40%;
+	margin-top: 20px;
+}*/
+body::before{
+	position:absolute;
+	top:0px;
+	left:50%;
+	transform:translateX(-50%);
+	content:"Google Search.css by AndrewC10. Google Search.css is not affiliated with Google LLC.";
+}
+#archive-widget>.widget-content{
+	height:108px;
+}
+@media screen and (max-width: 1245px) {
+	#navigation_box::before{
+		position:absolute;
+		left:50%;
+		transform:translateX(-50%);
+	}
+	#blog_keywords{
+		top:-1000px;
+	}
+    #side {
+        position: fixed;
+        top:0;
+        left: -20.1em;
+        width: 20em;
+        background:white;
+        height: 100%;
+        padding: 0 2em;
+        z-index: 1384710328740192837401983740918237401982374109823740193827120901928374102300;
+        overflow-y: scroll;
+        -webkit-transition-property: left;
+        transition-property: left;
+        -webkit-transition: .9s ease;
+        transition: .9s ease;
+        border:1px solid gray;
+        opacity: 1;
+    }
+    #side:after {
+        content: "»";
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background: rgb(225,225,225);
+        display: block;
+        font-size: 2em;
+        z-index: 138471032874019283740198374091823740198237410982374019382712090192837410230;
+        padding: 0.35em 0.4em;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 0 1em 1em 0;
+        -webkit-transition-property: left;
+        transition-property: left;
+        -webkit-transition: .7s ease;
+        transition: .7s ease;
+    }
+    @media all and (max-width:520px) {#side:after {height: 2em; width: 2em; padding: 0.6em 0.65em;}}
+ 
+    #side:hover {
+        left: 0;
+        -webkit-transition: .9s ease;
+        transition: .9s ease;
+    }
+    #side:hover:after {
+        left: -1.5em;
+        -webkit-transition: .7s ease;
+        transition: .7s ease;
+        opacity: 0;
+    }
+    #main{
+        margin-left:0px;
+        width:99%;
+    }
+    #navigation_box>div{
+        margin-left:0px;
+    }
+    body::before{
+        transform:none;
+        left:0px;
+        float:left;
+        font-size: 10px;
+    }
+}
