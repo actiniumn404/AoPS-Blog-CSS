@@ -1,0 +1,362 @@
+/*
+* Unity.css made by AndrewC10
+*
+* Credit to @Happycupcake for the fluid archive.
+*
+* Released under the MIT license
+*
+* Based off of the Unity game engine by Unity Technologies.
+*/
+:root {
+	--gray: #282828;
+}
+
+.entrywrap,
+.cmty-poll-display,
+pre[class*="language"],
+.cmty-hide-content,
+.bbcode_quote,
+pre[id*="pywindow"],
+.comment {
+	z-index: 104;
+	color: lightgray;
+	background-color: transparent !important;
+	border: 1px solid white !important;
+}
+
+#navigation_box {
+	background-color: white;
+	margin-top: 20px;
+	width: 100%;
+}
+
+#navigation_box>div {
+	float: left;
+	margin-left: 5px;
+}
+
+#navigation_box>div>a {
+	color: black !important;
+}
+
+#header h1 {
+	font-size: 14px;
+	position: absolute;
+	top: -42px;
+	left: 10px;
+	color: black !important;
+}
+
+#header {
+	position: absolute;
+	left: 0px;
+	height: 20px;
+	border: none;
+	background-color: white;
+	overflow: hidden;
+}
+
+#wrapper {
+	width: 100%;
+	border: none;
+}
+
+#wrapper,
+#side,
+body,
+#content {
+	background: var(--gray) !important;
+}
+
+#content {
+	margin-top: 42px;
+}
+
+p.description {
+	position: absolute;
+	top: 5px;
+	z-index: 101;
+	width: 30%;
+	margin: 0px;
+	text-align: left;
+	left: 150px;
+}
+
+#shouts-widget {
+border:1px solid white;
+	margin-bottom: 0px !important;
+	height: 27vh;
+	width: calc(25vw + 20px);
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background-color: var(--gray);
+	z-index: 102;
+	color: white;
+	padding: 5px;
+}
+
+#side .aops-scroll-inner {
+	overflow-y: hidden !important;
+}
+
+#shouts-widget fieldset {
+	border: none;
+}
+
+li.blog-shout {
+	width: 24vw;
+	background-color: transparent;
+}
+
+ul.aops-scroll-content {
+	width: 100% !important;
+	background-color: var(--gray);
+	height: calc(100% - 200px);
+	overflow-y: scroll;
+}
+
+#message {
+	resize: none;
+	height: 42px;
+	width: 98%;
+}
+
+.blog-shout a {
+	color: #8AE234;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.blog-shout a::after {
+	font-weight: bold;
+	color: #729FCF;
+	content: " ~ $ ";
+}
+
+.blog-shout p {
+	font-size: 0px;
+}
+
+#main {
+	color: lightgray;
+	position: absolute;
+	right: 0px;
+	height: 70vh;
+	width: calc(75vw - 7px);
+	overflow: auto;
+}
+
+#archive-widget {
+	top: 60px;
+	position: fixed;
+	left: 20px;
+	color: white !important;
+	font-size: 20px;
+}
+
+#archive-widget a {
+	color: white !Important;
+	margin-left: 10px;
+}
+
+/*happycupcake orz zone, proceed with caution*/
+.month-image {
+	background: url(https://cdn.iconscout.com/icon/free/png-256/right-arrow-1767593-1502497.png) !important;
+	background-size: 16px 16px !important;
+	filter: invert(100%);
+	padding-left: 16px;
+	width: 16px;
+	height: 16px;
+	transition: transform .5s;
+	transform: rotate(90deg);
+}
+
+.month-image[alt="+"] {
+	transition: transform .5s;
+	transform: rotate(-360deg);
+}
+
+.archive-month-topics {
+	display: block;
+	height: auto;
+}
+
+.archive-row {
+	transition: transform .2s .1s, height .2s;
+	height: 20px;
+	padding: 0 0 0 30px;
+}
+
+.archive-month-collapsed .archive-row {
+	transition: transform .2s, height .1s .1s;
+	transform: scaleY(0);
+	height: 0;
+}
+
+/*happycupcake = orz. */
+#search-widget .widget-header,
+#search-widget .widget-settings,
+#search-widget .widget-footer {
+	display: none;
+}
+
+#search-widget .widget-content {
+	background-color: transparent;
+}
+
+#blog_searchform>fieldset {
+	border: none;
+}
+
+#blog_keywords {
+	position: fixed;
+	bottom: 20vh;
+margin-left:15px;
+	height: 40px;
+	width: 70vw;
+	z-index: 103;
+	left: calc(25vw + 20px);
+}
+
+#blog_searchform .button2 {
+	position: fixed;
+	bottom: 20vh;
+	height: 40px;
+	z-index: 103;
+	right: 2vw;
+	background-color: dodgerblue;
+	color: white;
+}
+
+.cmty-item-tag {
+	background-color: transparent !Important;
+}
+
+.cmty-item-tag {
+	color: white !important;
+}
+
+.cmty-item-tag::before {
+	content: "#"
+}
+
+.cmty-itembox,
+.cmty-items-input-box {
+	background-color: var(--gray) !important;
+}
+
+.widget-content .cmty-itembox::before {
+	content: "...Or search by tag";
+	color: white;
+}
+
+.widget-content .cmty-itembox {
+	max-height: 300px;
+	overflow: scroll;
+	width: fit-content;
+margin-left:15px;
+	position: fixed;
+	left: calc(25vw + 20px);
+	z-index: 103;
+	bottom: -120px;
+}
+
+#post-new-entry {
+	padding: 5px;
+	background-color: white;
+	color: black !Important;
+}
+
+#post-new-entry-img {
+	display: none;
+}
+
+#main .latex,
+#main .latexcenter,
+#main .asy-image {
+	filter: invert(100%);
+}
+
+#about-owner-widget {
+	position: fixed;
+	left: calc(25vw + 320px);
+	color: lightgray;
+	z-index: 103;
+	bottom: 50px;
+}
+
+#stats-widget {
+	position: fixed;
+	left: calc(25vw + 520px);
+	color: lightgray;
+	z-index: 103;
+	bottom: 5px;
+}
+
+#contrib-widget {
+	position: fixed;
+	left: calc(25vw + 320px);
+	color: lightgray;
+	z-index: 103;
+	bottom: 0px;
+}
+
+.avatar {
+	position: fixed;
+	left: calc(25vw + 750px);
+	color: lightgray;
+	z-index: 103;
+	bottom: 100px;
+}
+
+.user-full {
+	position: fixed;
+	left: calc(25vw + 750px);
+	color: lightgray;
+	z-index: 103;
+	bottom: 70px;
+}
+
+.blog-tags-wrapper {
+	border: none;
+}
+
+#side>div:nth-child(5)>.widget-header {
+	display: none;
+}
+
+.cmty-hide-content::after,
+.bbcode_quote_head,
+.bbcode_quote::after {
+	background-color: transparent !important;
+}
+
+.bbcode_quote_head {
+	color: lightgray !important;
+}
+
+.cmty-post-edit-info {
+	display: none !Important;
+}
+
+.entry h1 a {
+	border: 1px white solid;
+	color: white !important;
+	padding: 3px;
+}
+
+.entry h2 {
+	font-size: 0px;
+}
+
+.entry>h2>a {
+	display: none;
+}
+
+.entry h2 strong {
+	font-size: 15px;
+}
+#main::before{
+content:"Unity.css made by AndrewC10 :)";
+}
