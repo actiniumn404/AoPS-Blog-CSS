@@ -1,0 +1,563 @@
+/*
+*AoPS Homework.css? by @AndrewC10
+*
+*Released under M.I.T. Licence.
+*
+*Thank you CSS god @ZhaoM for some CSS code snippets, for pointing out some glitches, and for giving suggestions.
+*/
+/*Navbar*/
+#navigation_box {
+    background-color: #009fad;
+    margin-top: 80px;
+    z-index: 101;
+}
+
+#navigation_box::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 80px;
+    width: 100%;
+    left: 0px;
+    top: -80px;
+    z-index: 10;
+    background-color: white;
+}
+
+#navigation_box::after {
+    content: "";
+    display: inline-block;
+    background-image: url("https://artofproblemsolving.com/assets/images/logos/aops-online.svg");
+    float: left;
+    background-size: 256px 50px;
+    height: 50px;
+    width: 256px;
+    margin-top: 32px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 11;
+}
+
+.blog-logout {
+    width: 147px;
+    color: #009fad !important;
+    right: 120px;
+    font-size: 16px !important;
+    position: absolute;
+    top: -60px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: left;
+    font-weight: bolder;
+    z-index: 10;
+    color: #009fad !important;
+    text-transform: uppercase;
+}
+
+.blog-logout::before {
+    content: "LOGOUT";
+    color: white !important;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    font-size: 17px !important;
+}
+
+.blog-logout::after {
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    content: "Sign Out";
+    padding-top: 10px !important;
+    border-top: 2px solid #009fad !important;
+}
+
+.blog-logout:hover::after {
+    visibility: visible !important;
+}
+
+#header {
+    background: transparent;
+    border: none;
+    height: 200px;
+}
+
+#wrapper {
+    border: none;
+}
+
+body,
+#header,
+#header h1,
+#wrapper {
+    background: url(https://artofproblemsolving.com/assets/images/top/pattern-online-gray.png);
+}
+
+#content {
+    background-color: white;
+}
+
+#wrapper {
+    width: 80vw;
+    margin-left: 10vw !important;
+}
+
+#header h1 {
+    color: #009fad !important;
+    font-size: 24px;
+    font-weight: bolder;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+}
+
+p.description {
+    position: absolute;
+    left: 10vw;
+    top: 140px;
+    z-index: 100;
+}
+
+#stats-widget>.widget-content {
+    position: absolute;
+    top: 90px;
+    padding-left: 20px;
+    border-left: 1px solid black;
+    z-index: 100;
+    right: 10vw;
+}
+
+#stats-widget ul {
+    list-style: none;
+}
+
+#main {
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+#main h1 {
+    background-color: rgba(27, 54, 93, 1) !important;
+    padding: 5px;
+}
+
+#main h1 a,
+#main h1>span {
+    color: white !Important;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h2 {
+    order: 6;
+    left: 180px;
+    width: fit-content !important;
+
+}
+
+h2::after {
+    top: -40px;
+    left: -180px;
+}
+
+.entrywrap,
+.cmty-poll-display,
+.commentwrap {
+    width: 100%;
+    border: 7px solid #e1e1e1 !important;
+    background-color: white !important;
+    margin: 0 !important;
+}
+
+body {
+    counter-reset: entry;
+}
+
+.entrywrap>*:first-child::before {
+    content: "Problem "counter(entry) ": ";
+    font-weight: bolder;
+    counter-increment: entry 1;
+}
+
+.blog-tags-wrapper .cmty-itembox-inner-box.aops-scroll-content {
+    width: 80vw;
+    height: 30px !important;
+}
+
+#side>div:nth-child(5) .widget-content * :not(a, .cmty-item-tag),
+#side>div:nth-child(5) fieldset {
+    border: none;
+    height: 40px !important;
+    width:calc(80vw - 20px);
+}
+#side>div:nth-child(5) *:not(.cmty-itembox-inner-box){
+overflow-y: hidden !important;
+}
+#side>div:nth-child(5) .cmty-itembox-inner-box{
+    overflow-y: scroll;
+}
+#side>div:nth-child(5) .widget-content {
+    position: absolute;
+    top: 200px;
+    left: 10vw;
+}
+
+#side>div:nth-child(5) .widget-content::before {
+    content: "Week:";
+    color: #009fad !important;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.widget-content .cmty-item-tag {
+    font-size: 18px !important;
+}
+
+.post-replies {
+    font-size: 0px !important;
+    height: fit-content;
+}
+
+.post-replies::before {
+    font-size: 1rem !important;
+    content: "Give Up";
+    background: rgba(27, 54, 93, 1);
+    padding: 5px;
+}
+
+.post-comment {
+    font-size: 0px !important;
+    height: fit-content;
+}
+
+.post-comment::before {
+    font-size: 1rem !important;
+    content: "Ask for help";
+    background: rgba(27, 54, 93, 1);
+    padding: 5px;
+}
+
+.cmty-item-tag {
+    background-color: transparent !important;
+    color: #009fad !important;
+    height: fit-content;
+    padding: 4px !important;
+}
+
+.cmty-item-tag:hover {
+    border: 2px solid #009fad;
+    border-radius: 8px;
+}
+
+#main>*:nth-child(1) {
+    margin-top: 250px;
+}
+
+h2 *,
+h2 {
+    color: transparent !important;
+    font-size: 14px !important;
+}
+
+h2:hover {
+    color: #2188e0 !important;
+
+}
+
+h2:hover a {
+    color: #bd4f17 !important;
+}
+
+h2 img {
+    display: none;
+}
+
+h2::after {
+    position: relative;
+    content: "Formatting Tips";
+    color: #2188e0 !important;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.entry:hover::before {
+    font-size: 24px;
+}
+
+.efooter a,
+.modactions a {
+    font-size: 14px;
+    text-decoration: none !important;
+    color: white !important;
+    padding: 5px;
+    margin: 5px;
+}
+
+.modactions a {
+    font-size: 14px;
+    text-decoration: none !important;
+    color: white !important;
+    background-color: rgba(27, 54, 93, 1);
+    padding: 5px;
+    margin: 5px;
+    transform: skew(50deg);
+}
+
+#left_navigation_box:first-child {
+    margin-left: 100px;
+}
+
+#left_navigation_box a:last-child {
+    color: white !important;
+}
+
+#left_navigation_box a,
+#left_navigation_box {
+    color: #cdeef1 !important;
+    font-weight: bolder;
+}
+
+#wrapper::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 42px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #1b365d;
+    z-index: 101;
+    order: 100;
+}
+
+#wrapper::after {
+    z-index: 102;
+    content: "";
+    position: fixed;
+    left: calc(7.5% + 30px);
+    bottom: 12px;
+    width: 119.47px;
+    height: 22px;
+    background: url(https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg);
+    background-size: 119.47px 22px;
+}
+
+.blog-report-post>span::after {
+    content: " Error";
+}
+
+.cmty-post-edit-info {
+    display: none !important;
+}
+
+#post-new-entry-img {
+    display: none;
+}
+
+#post-new-entry {
+    font-size: 0px;
+}
+
+#post-new-entry::before {
+    font-size: 14px !important;
+    color: white;
+    content: "Assign new problem";
+    padding: 5px;
+    background-color: rgba(27, 54, 93, 1) !important;
+}
+
+/*Shouts scrollbar patch by happycupcake.*/
+.blog-shout-wrapper>.aops-scroll-outer>.aops-scroll-inner {
+    scrollbar-width: none;
+}
+
+.blog-shout-wrapper>.aops-scroll-outer>.aops-scroll-inner::-webkit-scrollbar {
+    width: 0px;
+    /*Yay for nonstandard behavior /s.*/
+}
+
+#message {
+    position: absolute;
+    top: 260px;
+    z-index: 101;
+    resize: none;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+fieldset.blog-shout-wrapper {
+    position: absolute;
+    top: 310px;
+    z-index: 101;
+    resize: none;
+    width: 247px;
+    left: 50%;
+    height: 130px !important;
+    transform: translateX(-50%);
+}
+
+#blog_searchform fieldset {
+    border: none;
+}
+
+#search-widget>.widget-content {
+    background-color: none !important;
+    position: absolute;
+    top: 250px;
+    z-index: 101;
+    height: 130px !important;
+    transform: translateX(-50%);
+    left: calc(50% + 267px)
+}
+
+#contrib-widget .widget-content {
+    width: 257px;
+    position: absolute;
+    top: 270px;
+    z-index: 102;
+    height: 160px !important;
+    transform: translateX(-50%);
+    left: calc(50% - 267px);
+    overflow: auto;
+}
+
+input.button2 {
+    display: none;
+}
+
+#blog_keywords {
+    width: 237px;
+    padding: 5px;
+}
+
+#archive-widget .widget-content {
+    position: absolute;
+    top: 300px;
+    z-index: 102;
+    height: 130px !important;
+    transform: translateX(-50%);
+    left: calc(50% + 320px);
+    overflow: auto;
+}
+
+.archive-row {
+    padding-left: 0;
+    margin-left: 15px;
+}
+
+.month-image {
+    background: url(https://cdn.iconscout.com/icon/free/png-256/right-arrow-1767593-1502497.png) !important;
+    background-size: 16px 16px !important;
+    padding-left: 16px;
+    width: 16px;
+    height: 16px;
+    transition: transform .5s;
+    transform: rotate(90deg);
+}
+
+.month-image[alt="+"] {
+    transition: transform .5s;
+    transform: rotate(-360deg);
+}
+
+.archive-month-topics {
+    display: block;
+    height: auto;
+}
+
+.archive-month {
+    width: 247px;
+}
+
+.archive-row {
+    transition: transform .2s .1s, height .2s;
+    height: 20px;
+    padding: 0 0 0 30px;
+}
+
+.archive-row a {
+    width: fit-content !important;
+}
+
+.archive-month-collapsed .archive-row {
+    transition: transform .2s, height .1s .1s;
+    transform: scaleY(0);
+    height: 0;
+}
+
+#side>div {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#user-menu-widget * :not(.description),
+.widget-header,
+.widget-footer,
+.blog-num-shouts,
+#about-owner-widget {
+    display: none;
+}
+
+#left_navigation_box a {
+    text-transform: uppercase;
+}
+
+#left_navigation_box a:not(:last-child):hover {
+    text-decoration: underline !important;
+}
+
+
+@media only screen and (max-width: 777px) {
+    #wrapper {
+        width: 100vw;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #stats-widget>.widget-content {
+        position: absolute;
+        top: 180px;
+        padding-left: 20px;
+        border-left: 1px solid black;
+        z-index: 100;
+        right: 0px;
+        left: 0px;
+        padding: 0;
+        border: 0;
+    }
+
+    #header h1 {
+        left: 40px;
+    }
+
+    #side>div:nth-child(5) .widget-content {
+        left: 40px;
+    }
+
+    #wrapper {
+        width: 80vw;
+        margin-top: calc(10vw + 110px + 61px) !important;
+    }
+
+    #main {
+        width: 100vw;
+    }
+
+    #left_navigation_box {
+        margin-left: 0 !important;
+    }
+
+    #right_navigation_box {
+        display: none;
+    }
+}
