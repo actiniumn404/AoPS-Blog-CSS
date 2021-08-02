@@ -3,6 +3,8 @@
 *
 * Released under MIT licence || https://github.com/actiniumn404/AoPS-Blog-CSS/blob/main/LICENSE
 *
+* This is not affiliated with Google LLC. in any way. 
+*
 * Credit to:
 *
 * Google Fonts for the fonts Open Sans and Roboto
@@ -721,4 +723,7 @@ a>.cmty-item-tag::before {
 
 #search-widget fieldset {
     border: 0;
+}
+#main::before{
+    content: "Gmail.css by AndrewC10. This is not affiliated with Google LLC. in any way.";
 }
