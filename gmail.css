@@ -1,10 +1,32 @@
-/*Huh, I am trying to replicate everything, even the fonts, which I usually do not do.*/
+/*
+* Gmail.css by AndrewC10
+*
+* Released under MIT licence || https://github.com/actiniumn404/AoPS-Blog-CSS/blob/main/LICENSE
+*
+* Credit to:
+*
+* Google Fonts for the fonts Open Sans and Roboto
+*
+* Windows Loading Screen (AndrewC10) which is based on the Awesomeness Loading Bar (Happycupcake) for the gmail opening
+*
+* https://dribbble.com/shots/14510264-Gmail-Opening-Animation for the opening gif (and for ezgif.com for editing the gif)
+*
+* AoPS News.css? (ZhaoM) for the post height limitation code
+*
+* Forum.css? (ZhaoM) for the idea and base code for the avatars
+*
+* 14th Station (Happycupcake) for the hashtag tag idea
+*
+* 14th Station (Happycupcake) for the archive magic
+*
+* Double scrollbar fix (Happycupcake) for fixing the double scrollbar
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 
-/* Took nearly an hour to perfect. The end result is pretty satisfying though. */
 @keyframes waiting {
     0% {
         opacity: 1;
