@@ -1,0 +1,702 @@
+/*Huh, I am trying to replicate everything, even the fonts, which I usually do not do.*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+/* Took nearly an hour to perfect. The end result is pretty satisfying though. */
+@keyframes waiting {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    80% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+body::before {
+    opacity: 0;
+    visibility: hidden;
+    content: url(https://i.imgur.com/MwShDZb.gif);
+    animation: waiting 3s !important;
+    width: 100vw !important;
+    height: 150vh !important;
+    display: block !important;
+    position: fixed;
+    font-size: 20px;
+    background-color: white;
+    z-index: 1000000000000000000000000000000000000000;
+    wide-space: nowrap;
+}
+
+#post-new-entry-p {
+    height: 0px;
+}
+
+#side {
+    position: fixed;
+    left: 0px;
+    background-color: white;
+    top: 330px;
+}
+
+#wrapper {
+    width: calc(100% - 270px);
+    float: right;
+    border: 0;
+    display: inline-block;
+    min-height: 100vh;
+    background: white !important;
+    margin: 0;
+}
+
+#navigation_box,
+#navigation_box * {
+    z-index: 102;
+}
+
+#navigation_box,
+#navigation_box>div {
+    background-color: transparent;
+    border: 0;
+    width: fit-content !important;
+    height: fit-content !important;
+    color: transparent;
+    font-size: 0px;
+}
+
+#navigation_box a {
+    display: inline-block;
+    border-radius: 0px 16px 16px 0px;
+    clear: left;
+    color: #202124 !important;
+    float: left;
+    text-align: left;
+    background-color: white;
+    width: 240px !important;
+    padding: 10px;
+    width: 100%;
+    font-size: .875rem;
+}
+
+#right_navigation_box {
+    clear: left;
+    float: left;
+}
+
+#navigation_box a:hover {
+    background-color: #f1f3f4;
+}
+
+#left_navigation_box a:last-child {
+    background-color: #fce8e6 !important;
+    color: #d93025 !important;
+    font-weight: bolder;
+}
+
+#navigation_box {
+    position: fixed;
+    top: 100px;
+}
+
+#wrapper {
+    margin-top: 64px;
+}
+
+#blog_keywords {
+    position: fixed;
+    border-radius: 8px;
+    height: 48px;
+    width: 712px;
+    left: 268px;
+    padding-left: 10px;
+    border: 0;
+    background: #f1f3f4;
+    top: 5px;
+}
+
+#blog_keywords:focus {
+    border: 1px solid lightgray;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%), 0 1px 3px 1px rgb(65 69 73 / 15%);
+}
+
+#header {
+    border: 0;
+}
+
+#header h1 {
+    position: fixed;
+    top: -25px;
+    font-size: 16pt !important;
+    left: 20px;
+    color: #3c4043;
+}
+
+#post-new-entry::before {
+    background-image: url(https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    position: fixed;
+    left: 10px;
+    top: 60px;
+    color: #3c4043 !important;
+    content: "Compose";
+    margin: 0;
+    padding-left: 32px;
+    padding-top: 5px;
+    display: block;
+    padding-right: 70px;
+    font-size: 14px;
+    border-radius: 24px;
+    width: 32px;
+    z-index: 102;
+    height: 32px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+}
+
+#post-new-entry-img {
+    display: none;
+}
+
+#post-new-entry {
+    font-size: 0px;
+}
+
+#header h1::before {
+    content: "aaa";
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png);
+    background-repeat: no-repeat;
+    background-size: auto 20px;
+    width: auto;
+    height: 20px;
+    color: transparent;
+}
+
+.entry {
+    border: 0 !important;
+}
+
+.entrywrap {
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5))>.entry {
+    background: rgba(242, 245, 245, 0.8);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    height: 60px;
+    padding: 10px 0px 10px 0px !important;
+    box-shadow: inset 0px -2px 0 0 rgb(100 121 143 / 12%);
+}
+
+#main {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: white;
+    width: calc(100vw - 310px);
+    float: right;
+}
+
+.entrywrap {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) .entrywrap {
+    FLEX: 1;
+    PADDING: 0 !important;
+    border: 0 !important;
+    overflow: hidden;
+    background: none !important;
+    font-size: .875rem;
+    color: #5f6368;
+    margin: 0px 0px 0px 4px !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) h1 a::after {
+    content: " - "
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) h1 a {
+    display: block;
+    color: #202124 !important;
+    font-size: .875rem;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) h2 {
+    order: 2;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5))>.entry:hover {
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 4px 0 rgba(60, 64, 67, .5), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    z-index: 102;
+}
+
+.cmty-post-attached-image-content a::before {
+    background-image: url(https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_image_x16.png);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 10px;
+    color: #3c4043 !important;
+    content: "Image.png";
+    margin: 5px;
+    padding-left: 35px;
+    display: block;
+    padding-right: 10px;
+    font-size: 14px;
+    border-radius: 24px;
+    width: fit-content;
+    padding-top: 5px;
+    z-index: 102;
+    height: 32px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.cmty-post-attached-file a {
+    position: relative;
+    top: -30px;
+    left: 40px;
+    color: #3c4043 !important;
+}
+
+.cmty-post-attached-file a::before {
+    position: relative;
+    top: 30px;
+    left: -38px;
+    background-image: url(//ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x16.png);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 10px;
+    color: #3c4043 !important;
+    content: "";
+    margin: 5px;
+    padding-left: 35px;
+    display: block;
+    padding-right: 10px;
+    font-size: 14px;
+    border-radius: 24px;
+    width: calc(100% + 35px + 16px);
+    padding-top: 5px;
+    z-index: 102;
+    height: 32px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.cmty-post-attached-image-content img,
+.cmty-post-attached-title {
+    display: none;
+}
+
+.cmty-post-attachments {
+    width: fit-content;
+    display: flex !important;
+}
+
+#main>div.post-has-attachment:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) .cmty-post-attachments {
+    position: absolute;
+    top: 35px;
+    background: rgba(242, 245, 245, 1);
+    width: 100%;
+}
+
+#main>div.post-has-attachment:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) .entry {
+    height: 100px !important;
+}
+
+.entry img,
+.author img {
+    display: none;
+}
+
+.entry .username-coloured,
+.author a {
+    color: #202124 !important;
+    font-size: 14px !important;
+}
+
+#main .username-coloured::after,
+.author a::after {
+    content: " <"attr(href) "@artofproblemsolving.com>";
+    color: #555 !important;
+    font-weight: 400;
+    font-size: 12px !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) .entry .username-coloured::after {
+    content: "" !important;
+}
+
+.entry h1 a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.375rem;
+    font-variant-ligatures: no-contextual;
+    color: #202124 !important;
+    font-weight: 400;
+}
+
+.entry h2 {
+    color: #555;
+}
+
+.cmty-post-edit-info {
+    display: none !important;
+}
+
+.efooter a:hover,
+.cfooter a:hover {
+    opacity: 0.87;
+}
+
+.post-replies {
+    display: none !important;
+}
+
+.post-comment {
+    float: right;
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    font-size: 0px;
+    display: inline-block !important;
+    height: 20px;
+    width: 20px;
+    opacity: 0.54;
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/reply_black_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+#feed-wrapper {
+    display: none;
+}
+
+.comment {
+    padding: 5px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.commentwrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.cfooter {
+    order: -1;
+}
+
+.author {
+    font-size: 12px !important;
+}
+
+.blog-delete-post {
+    margin: 5px;
+    font-size: 0px;
+    display: inline-block !important;
+    height: 20px;
+    width: 20px;
+    opacity: 0.54;
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/delete_black_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.blog-report-post,
+.blog-moderate-topic {
+    margin: 5px;
+    font-size: 0px;
+    display: inline-block !important;
+    height: 20px;
+    width: 20px;
+    opacity: 0.54;
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/report_black_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.blog-edit-post {
+    margin: 5px;
+    font-size: 0px;
+    display: inline-block !important;
+    height: 20px;
+    width: 20px;
+    opacity: 0.54;
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/edit_black_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.blog-num-comments,
+.blog-post-comment {
+    display: none;
+}
+
+#side {
+    height: calc(100vh - 330px);
+    overflow: auto;
+}
+
+.cmty-posting-environ {
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+}
+
+.user-full {
+    display: none;
+    position: fixed;
+    top: 45px;
+    right: 0px;
+}
+
+p.avatar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+p.avatar img {
+    width: 40px;
+    height: 40px;
+}
+
+.user-full a {
+    color: #202124 !important;
+}
+
+p.avatar:hover+.user-full {
+    display: block !important;
+}
+
+.username-coloured::before,
+p.author a::before,
+.blog-shout p a::before,
+#contrib-widget a::before {
+    background-image: url(https://avatar.artofproblemsolving.com/no-avatar);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    content: "";
+    margin: 5px;
+    display: block;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+.username-coloured::before {
+    left: -50px;
+    top: -10px;
+}
+
+p.author a::before {
+    left: 5px;
+    top: 0px;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) .username-coloured::before {
+    display: none !important;
+}
+
+.commentwrap,
+.comment {
+    padding-left: 50px !important;
+    position: relative !important;
+    left: -50px;
+    width: calc(100% + 50px) !important;
+}
+
+.blog-shout {
+    height: fit-content;
+    float: right;
+    width: calc(100% - 40px);
+}
+
+.blog-shout p a::before {
+    left: -10px;
+}
+
+.blog-shout {
+    display: flex !important;
+    margin-bottom: 10px;
+    background-color: white !important;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.blog-shout p:last-child,
+.blog-shout p:last-child a {
+    order: -1;
+    color: rgba(0, 0, 0, .54);
+    font-weight: bold;
+}
+
+#shouts-widget .aops-scroll-outer,
+#side>div:not(.block, .widget) .aops-scroll-outer {
+    background-color: #eceff1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 230px;
+    resize: none;
+}
+
+#shouts-widget {
+    display: flex;
+    flex-direction: column;
+}
+
+#shouts-widget fieldset,
+#side>div:not(.block, .widget) fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+#message-box {
+    order: 10;
+}
+
+.widget-title,
+h1 {
+    font-size: 16px;
+    font-weight: 500 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #202124 !important;
+}
+
+*,
+*::before,
+*::after {
+    font-family: 'Roboto', sans-serif;
+}
+
+#message {
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 230px;
+    resize: none;
+}
+
+.cmty-item-tag {
+    color: black !important;
+    background-color: transparent !important;
+    transition: 0.2s ease;
+}
+
+a>.cmty-item-tag::before {
+    content: "#";
+}
+
+.cmty-item-tag:hover {
+    background-color: #eceff1 !important;
+    transition: 0.2s ease;
+}
+
+.blog-num-shouts {
+    position: absolute;
+    transform: translate(-400px, 70px);
+}
+
+.blog-num-shouts::after {
+    content: "shouts";
+    color: white;
+    background-color: white;
+    position: absolute;
+    transform: translateX(-44.44px);
+}
+
+/*Shouts scrollbar patch by happycupcake. Modified by AndrewC10*/
+:where(.blog-shout-wrapper, .blog-tags-wrapper) .aops-scroll-outer>.aops-scroll-inner {
+    scrollbar-width: none;
+}
+
+:where(.blog-shout-wrapper, .blog-tags-wrapper) .aops-scroll-outer>.aops-scroll-inner::-webkit-scrollbar {
+    width: 0px;
+    /*Yay for nonstandard behavior /s.*/
+}
+
+/* Fluid archives by HappyCupcake*/
+.archive-month-topics {
+    display: block;
+    height: auto;
+}
+
+.archive-row {
+    transition: transform .2s .1s, height .2s;
+    height: 20px;
+    padding: 0 0 0 30px;
+}
+
+.archive-month-collapsed .archive-row {
+    transition: transform .2s, height .1s .1s;
+    transform: scaleY(0);
+    height: 0;
+}
+
+/*Archive image*/
+.month-image {
+    background: url(https://cdn.iconscout.com/icon/free/png-256/right-arrow-1767593-1502497.png) !important;
+    background-size: 16px 16px !important;
+    padding-left: 16px;
+    width: 16px;
+    height: 16px;
+    transition: transform .5s;
+    transform: rotate(90deg);
+}
+
+.month-image[alt="+"] {
+    transition: transform .5s;
+    transform: rotate(-360deg);
+}
+
+#contrib-widget a::before {
+    position: absolute;
+    left: 0px;
+    transform: translateY(-10px);
+}
+
+#contrib-widget {
+    font-size: 0px;
+}
+
+#contrib-widget a {
+    font-size: initial !important;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    height: 40px;
+    color: #202124 !important;
+    padding-top: 10px;
+}
+
+#search-widget,
+#search-widget .widget-content {
+    height: 0px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#search-widget>*:not(.widget-content),
+.button2 {
+    display: none;
+}
+
+#search-widget fieldset {
+    border: 0;
+}
