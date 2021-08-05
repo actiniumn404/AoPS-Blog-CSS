@@ -602,9 +602,8 @@ h1 {
     color: #202124 !important;
 }
 
-*,
-*::before,
-*::after {
+body,
+#header h1::before{
     font-family: 'Roboto', sans-serif;
 }
 
