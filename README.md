@@ -4,6 +4,7 @@ A simple dark mode css for AoPS blogs that features a pleasing white on black ef
 Nice and simple.
 
 ## Gmail.css
+![Gmailcss screenshot. Image link -> https://i.ibb.co/ykjTDp5/image.png](https://i.ibb.co/ykjTDp5/image.png)
 Gmail.css is a nice clean framework for AoPS Blogs that is based off of [Google's mail service (gmail).](https://gmail.com) Note that this CSS is not affiliated with Google LLC or Alphebet in any way.
 
 Blog with this framework: [https://artofproblemsolving.com/community/c2418287](https://artofproblemsolving.com/community/c2418287)
