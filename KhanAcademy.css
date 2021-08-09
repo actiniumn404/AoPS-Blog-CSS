@@ -1,3 +1,10 @@
+/*
+* Khan Academy.css by AndrewC10
+*
+* Released under the MIT Licence | https://github.com/actiniumn404/AoPS-Blog-CSS/blob/main/LICENSE
+*
+* Thank you to @Forester2015 for a little bit of help and feedback.
+*/
 #wrapper::before {
     content: "";
     display: inline-block;
@@ -157,7 +164,6 @@ p.description {
     /*width: calc(50vw + 320px);*/
     width: 940px;
     margin-right: calc((100vw - 1250px) / 2);
-    ;
 }
 
 #content {
