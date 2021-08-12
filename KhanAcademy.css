@@ -150,7 +150,7 @@ p.description {
     position: absolute;
     color: white;
     top: 90px;
-    z-index: 51;
+    z-index: 49;
     opacity: 0.54;
     left: calc((100% - 1200px) / 2 + 5px);
 }
