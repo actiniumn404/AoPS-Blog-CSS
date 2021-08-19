@@ -658,6 +658,12 @@ body {
     height: 32px;
 }
 
+/* Last minute checks be like: */
+
+.cmty-poll-display{
+    background-color:var(--main-bg);
+    border:1px solid var(--border);
+}
 
 @media only screen and (max-width: 1284px) {
     #content {
