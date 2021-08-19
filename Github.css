@@ -281,6 +281,7 @@ a {
     top: 100px;
     left: 32px;
     width: fit-content;
+    z-index: 50;
 }
 
 #navigation_box>div {
