@@ -18,7 +18,7 @@
         --secondary-color: #8b949e;
         --link-color: #58a6ff;
         --main-bg: #0d1117;
-        --username-width: 0px;
+        --username-width: 200px;
         --border: #30363d;
         --color-invert-reply: 0.8;
         --color-invert-reply-other: 0.2;
@@ -36,7 +36,7 @@
         --secondary-color: #586069;
         --link-color: #0366d6;
         --main-bg: white;
-        --username-width: 0px;
+        --username-width: 200px;
         --border: #e1e4e8;
         --color-invert-reply: 0.1;
         --color-invert-reply-other: 0.8;
