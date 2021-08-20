@@ -118,6 +118,7 @@ a {
     color: var(--link-color) !important;
     line-height: 1;
     width: fit-content;
+    z-index:50;
     margin-top: 16px;
     font-size: 20px;
     margin-left: calc(66px + var(--username-width));
@@ -169,6 +170,7 @@ a {
     color: var(--link-color) !important;
     font-weight: 400 !important;
     left: 32px;
+    z-index: 51;
     font-size: 20px;
 }
 
