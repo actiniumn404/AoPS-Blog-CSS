@@ -109,15 +109,19 @@ a {
     border: 0;
     height: fit-content;
     width: fit-content;
+    height:-moz-fit-content;
+    width:-moz-fit-content;
     background: transparent;
     overflow: hidden;
 }
 
 #header h1 {
+    height:-moz-fit-content;
     height: fit-content;
     color: var(--link-color) !important;
     line-height: 1;
     width: fit-content;
+    width: -moz-fit-content;
     z-index:50;
     margin-top: 16px;
     font-size: 20px;
@@ -217,6 +221,7 @@ a {
 
 #main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5))>.entry h1 {
     height: fit-content;
+    height:-moz-fit-content;
     width: 245px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -233,7 +238,9 @@ a {
 
 #main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5))>.entry h2 {
     height: fit-content;
+    height:-moz-fit-content;
     width: fit-content;
+    width:-moz-fit-content;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
@@ -282,6 +289,7 @@ a {
     background-color: transparent;
     top: 100px;
     left: 32px;
+    width:-moz-fit-content;
     width: fit-content;
     z-index: 50;
 }
@@ -510,6 +518,7 @@ body {
 }
 
 #main .cmty-posting-preview-bar {
+    width:-moz-fit-content;
     width: fit-content;
     background: none;
     order: -1;
