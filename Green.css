@@ -1,0 +1,182 @@
+/*Green.css made by AndrewC10*/
+/*Do not remove the previous line*/
+
+:root { /*Defining variables credit to w3schools. This is super handy*/
+--color-1:#13eba2;
+--color-2:#38febb;
+--color-3:#056644;
+--color4:#0ad488;
+}
+
+/**Background**/
+html{
+background-color: var(--color-3);
+}
+
+/**Changing the blog width**/
+div#wrapper { /*Based off of DIM https://artofproblemsolving.com/community/c66h2261896_release_dim_default_improved*/
+    width: 70%;
+    height: inherit;
+}
+
+div#main {
+    width: 75%;
+}
+/**Nav box**/
+#navigation_box{
+position: fixed;
+height: 50px;
+background-color: #09606a;
+}
+#navigation_box a{
+margin-top: 15px;
+font-size: 20px;
+margin-left: 12px;
+margin-right: 6px;
+}
+#navigation_box a:hover{font-size: 28px; transition: 0.2s;}
+#navigation_box a:not(hover){font-size: 20px; transition: 0.2s;}
+
+/**Header**/
+#header{
+height:300px;
+background-color: var(--color-1);
+}
+
+#header h1{
+text-decoration: none;
+margin-top: 50px;
+font-size: 70px;
+text-align: center;
+}
+#header h1:hover{font-size: 105px; transition: 0.2s;}
+#header h1:not(hover){font-size: 70px; transition: 0.2s;}
+
+/**Content**/
+#content{
+background-color: var(--color-2);
+}
+
+/**message**/
+div .entrywrap{
+background-color: var(--color-1);
+}
+
+/**Content**/
+.blog-shout-wrapper, .cmty-itembox{
+background-color: var(--color-3);
+}
+
+/**textarea**/
+textarea#message.inputbox{
+color:white;
+background: rgb(5,172,114);
+background: linear-gradient(180deg, rgba(5,172,114,1) 50%, rgba(5,102,69,1) 100%);
+}
+
+/**Search Function**/
+#search-widget .widget-title, #search-widget .widget-header, #search-widget .widget-settings, #search-widget .widget-footer{
+display: none;}
+ #search-widget .widget-content{
+background-color: var(--color-2);
+}
+ 
+#blog_searchform fieldset{
+border: none;
+}
+ 
+#blog_searchform .button2{
+height: 24px;
+width: 137px;
+background-color: #0026ff;
+color: white;
+}
+#blog_searchform .button2{/*display:none;*/}
+#blog_searchform .button2 .value::after{content:"Go!"}
+
+/**poll**/
+.cmty-poll-display{
+background-color: var(--color-2);
+}
+
+.widget-title::before, .widget-title::after, .archive-month-header::before{
+content: "⬇️  "; /*» */
+font-size: 18px;
+}
+.archive-month-header img{
+display: none;
+}
+/**quotes credit to player01**/
+.bbcode_quote, .bbcode_quote::after, .bbcode_quote_head {
+    background-color : var(--color-2) !important; 
+}
+.bbcode_quote{border: 1px solid black;}
+
+/*Shouts*/
+li.row1{background-color: var(--color-2);}
+li.row2{background-color: var(--color-1);}
+/*scroll bar*/
+.aops-scroll-bar{background-color: #46B1C9;}
+.aops-scroll-slider{background-color: #8aff8a}
+
+/*Edit*/
+.cmty-post-edit-info{ 
+visibility: hidden;
+}
+/*Animations*/
+.avatar img:hover {
+  animation-name: spin;
+  animation-duration: 1000ms; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+ 
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.entry h1:hover{font-size:35px; transition: 0.2s;}
+.entry h1:not(hover){font-size:21.5px; transition: 0.2s;}
+.username-coloured:hover{font-size:20px; transition: 0.2s;}
+.username-coloured:not(hover){font-size:13.5px; transition: 0.2s;}
+.description:hover{transform:scale(1.5); transition: 0.2s}
+.description:not(hover){transform:scale(1); transition: 0.2s}
+/*Tags*/
+.entrywrap .cmty-itembox{background-color: var(--color-1)}
+.cmty-item-tag:hover, .cmty-item-tag cmty-edit-tag aops-font:hover, .widget-title:hover{
+transform:scale(1.25); 
+transition: 0.2s;
+}
+.cmty-item-tag:not(hover), .cmty-item-tag cmty-edit-tag aops-font:not(hover), .widget-title:not(hover){
+transform:scale(1); 
+transition: 0.2s;
+box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); /*credit to SamuraiA*/
+}
+/*Hide tag*/
+.cmty-hide-heading{
+background-color: #87FED6 !important;
+border: 1px solid black;
+margin: 1px;
+color: #0066cc !important;
+}
+.cmty-hide-heading:hover{
+background-color: #0066cc !important;
+color: white !important;
+}
+.cmty-hide-content, .cmty-hide-content::after{background-color: var(--color-2);}
+.cmty-hide-content{border: 1px solid black;}
+/*Comments*/
+.commentwrap{background-color: var(--color4);}
+.comment{background-color: transparent;} /*Credit to player01*/
+
+/*Shouts scrollbar patch by happycupcake.*/
+.blog-shout-wrapper > .aops-scroll-outer > .aops-scroll-inner{
+  scrollbar-width: none;
+}
+.blog-shout-wrapper > .aops-scroll-outer > .aops-scroll-inner::-webkit-scrollbar {
+  width: 0px; /*Yay for nonstandard behavior /s.*/
+}
