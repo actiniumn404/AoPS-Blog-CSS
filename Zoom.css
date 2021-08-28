@@ -1,0 +1,459 @@
+/*
+* Zoom.css made by AndrewC10. This is not affiliated with Zoom Video Communications, Inc.
+*
+* Released under MIT license
+*
+* Thank you @ZhaoM for the post height limit CSS snippet
+*/
+.entry>.entrywrap {
+    max-height: none;
+    padding-bottom: 30px;
+    margin: 2px !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5))>.entry>.entrywrap {
+    max-height: 200px !important;
+    overflow: hidden;
+    height: 200px
+}
+
+#wrapper {
+    background: none !important;
+    width: 98vw;
+    margin: 0;
+}
+
+.entry {
+    border: 0 !important;
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 350px - 5vw);
+}
+
+.entry h1 a {
+    color: white !important;
+}
+
+.entry h2 {
+    position: relative;
+    top: -27px;
+    left: 1px;
+    font-size: 0px;
+    order: 4;
+    z-index: 50;
+}
+
+.entry h2 .username-coloured {
+    background-color: black;
+    color: white !important;
+    padding: 5px;
+    font-size: initial !important;
+}
+
+.entry h2 img {
+    display: none;
+}
+
+#main>*:last-child {
+    padding-bottom: 30px;
+}
+
+#main {
+    left: 5vw;
+    top: 0;
+    z-index: 100;
+    width: calc(100vw - 300px - 5vw) !important;
+    max-width: calc(100vw - 300px - 5vw);
+    display: flex;
+    height: 95vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #1A1A1A;
+}
+
+#wrapper,
+#content,
+#header,
+html {
+    background-color: black;
+    border: 0 !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5))>.entry {
+    width: auto !important;
+}
+
+#main>div:not(:first-of-type:nth-last-of-type(3):nth-last-child(5)) {
+    min-width: 20vw;
+    flex: 1;
+}
+
+#post-new-entry-p {
+    position: absolute;
+}
+
+.widget-header {
+    margin-bottom: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.widget-title {
+    font-size: 14px !important;
+}
+
+#contrib-widget {
+    color: transparent;
+    width: 240px;
+    position: absolute;
+    font-size: 0px;
+    z-index: 99;
+    top: 33px;
+}
+
+#contrib-widget .widget-content {
+    height: calc(50vh - 110px);
+    position: relative;
+    top: 10px;
+    overflow: auto;
+}
+
+#side {
+    position: fixed;
+    right: 10px;
+    z-index: 98;
+    z-index: 101;
+    background: #1a1a1a;
+    top: 0;
+    padding: 10px;
+    height: calc(100vh - 33px);
+}
+
+#contrib-widget a {
+    color: #8e9297 !important;
+    display: inline-block;
+    width: 100%;
+    font-size: 15px !important;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#contrib-widget a:hover {
+    background-color: #2e2e2e;
+    color: white !important;
+}
+
+/*#contrib-widget a::before{
+color:transparent !important;
+display:inline-block;
+    border-radius: 100%;
+position:relative;
+top:-5px;
+left:-5px;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://avatar.artofproblemsolving.com/no-avatar);
+    background-size: 100% 100%;
+    content: "a";
+    background-color: #000;
+    pointer-events: none;
+}*/
+#shouts-widget .widget-title {
+    font-size: 0px !important;
+}
+
+#shouts-widget .widget-title::before {
+    content: "Chat";
+    font-size: 14px;
+}
+
+#shouts-widget {
+    border-top: 1px solid white;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 23px;
+    height: calc(50vh - 23px);
+}
+
+#message {
+    height: 50px;
+    width: 245px;
+    resize: none;
+    position: absolute;
+    color: white;
+    bottom: calc(23px);
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 5px;
+    background-color: #1a1a1a;
+    z-index: 50;
+}
+
+.blog-shout>p:nth-child(1) {
+    display: none;
+}
+
+.blog-shout {
+    border-radius: 20px;
+    padding: 10px !important;
+    color: white;
+    margin-top: 5px;
+    background-color: #383838;
+}
+
+#shouts-widget a {
+    color: white !important;
+}
+
+#shouts-widget .aops-scroll-outer {
+    height: calc(50vh - 23px - 27px - 95px) !important;
+}
+
+#shouts-widget fieldset {
+    border: none !important;
+}
+
+.blog-num-shouts {
+    position: absolute;
+    top: 5px;
+    background: red;
+    max-width: 40px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    border-radius: 20%;
+    height: 27px;
+    padding: 5px;
+    left: 61%;
+}
+
+.blog-num-shouts::after {
+    content: "shouts";
+    background-color: #1a1a1a;
+    position: relative;
+    left: -48px;
+    font-weight: bolder;
+    color: #1a1a1a;
+}
+
+#blog_keywords {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    width: 220px;
+    outline: none;
+    border: none;
+    z-index: 100;
+    border-radius: 10px;
+    position: fixed;
+    transition: 0.5s;
+    top: 55px;
+}
+
+#blog_keywords:focus {
+    box-shadow: 0px 0px 8px #2b8dff;
+    transition: 0.5s;
+}
+
+/*Well flexbox get's annoying*/
+.blog-reply-window,
+#main>h1,
+.blog-posts-box {
+    display: inline-block;
+    width: 100%;
+}
+
+#shout-helper {
+    display: none !important;
+}
+
+#search-widget>*:not(.widget-content) {
+    display: none;
+}
+
+#search-widget {
+    width: 0px;
+}
+
+#search-widget .widget-content {
+    background-color: transparent;
+}
+
+#search-widget .widget-content div {
+    display: none;
+}
+
+#search-widget fieldset {
+    border: 0 !important;
+}
+
+#archive-widget .widget-title::before {
+    font-family: AoPS;
+    content: "8 ";
+}
+
+#archive-widget {
+    left: 17vw;
+}
+
+#side>div:not(.widget, .block) {
+    left: calc((80vw - 258px) / 4 + 17vw);
+}
+
+#about-owner-widget {
+    left: calc((80vw - 258px) / 2 + 17vw);
+}
+
+#stats-widget {
+    left: calc((80vw - 258px) / 4 * 3 + 17vw);
+}
+
+#user-menu-widget {
+    left: 0px;
+    width: 17vw;
+}
+
+.widget,
+.block {
+    margin: 0 !important;
+    padding: 5px;
+}
+
+#navigation_box {
+    left: auto;
+    z-index: 999999999 !important;
+    top: auto;
+    right: 20px;
+    bottom: 5px;
+}
+
+#archive-widget,
+#about-owner-widget,
+#side>div:not(.widget, .block),
+#stats-widget,
+#user-menu-widget,
+#navigation_box {
+    max-height: 23px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    z-index: 101;
+    color: white;
+    padding: 0 !important;
+    width: calc((80vw - 258px) / 4);
+    transition: 0.7s ease;
+}
+
+#archive-widget:hover,
+#about-owner-widget:hover,
+#side>div:not(.widget, .block):hover,
+#stats-widget:hover,
+#user-menu-widget:hover,
+#navigation_box:hover {
+    max-height: 1000px !important;
+    overflow: auto !important;
+}
+
+#header h1 {
+    display: none;
+}
+
+#navigation_box,
+#navigation_box>div {
+    background-color: black;
+    border: 0;
+    width: fit-content !important;
+    height: fit-content !important;
+    color: transparent;
+}
+
+#navigation_box a {
+    clear: left;
+    color: white !important;
+    float: left;
+    margin: 10px;
+    font-size: 18px;
+}
+
+#right_navigation_box {
+    clear: left;
+    float: left;
+}
+
+#user-menu-widget::before {
+    content: "Blog Info";
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-weight: bolder;
+    left: 50%;
+    font-size: 14px !important;
+}
+
+div#navigation_box::before {
+    content: "Leave";
+    width: fit-content;
+    background-color: Red;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    float: left;
+    margin-left: 25%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: inline-block;
+    height: 22px;
+    font-size: 14px;
+    z-index: 9000000;
+    padding-bottom: 2px;
+}
+
+#side>div:not(.widget, .block) .widget-title::before {
+    content: "C ";
+    font-family: aops;
+}
+
+#about-owner-widget .widget-title::before {
+    content: "w ";
+    font-family: aops;
+    text-transform: lowercase;
+}
+
+#stats-widget .widget-title::before {
+    content: "9 ";
+    font-family: aops;
+    text-transform: lowercase;
+}
+
+#post-new-entry-img {
+    display: none;
+}
+
+#post-new-entry,
+.efooter a,
+.commentwrap .modactions a {
+    color: white !important;
+    margin: 5px;
+    text-decoration: none !important;
+    font-size: 14px;
+    background-color: #242424;
+    padding: 5px;
+}
+
+#post-new-entry-p {
+    right: 280px;
+}
+
+#main::before {
+    content: "Zoom.css made by AndrewC10. This is not affiliated with Zoom Video Communications, Inc.";
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: white;
+}
