@@ -16,7 +16,7 @@ data = {
     },
     "homework":{
         "bg":"#1b365d",
-        "color":"#009fad"
+        "color":"#009fad",
         "info":`AoPS Class Homework.css is based off of the homework page of an AoPS Classroom. Kudos to the pr0 CSS, AIME, Math, and Alcumus god @Zhaom <img src="https://artofproblemsolving.com/assets/images/smilies/notworthy.gif"> for some code snippets and overall helping me with the code. You can find the release <a href="https://artofproblemsolving.com/community/c66h2618824_release_aops_class_homeworkcss" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/AoPS%20Class%20Homework.css" target="_blank">here.</a>`
 
     },
@@ -34,10 +34,10 @@ data = {
         "bg":"#0a2a66",
         "color":"#14bf96", 
         "info":`Khan Academy.css is a simple repersentation of the Khan Academy website. You can find the release <a href="https://artofproblemsolving.com/community/c66h2643820_release_khan_academycss" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/KhanAcademy.css" target="_blank">here.</a>`
-    }
+    },
     "github":{
         "bg":"black",
-        "color":"white"
+        "color":"white",
         "info":`Github.css is my most accurate CSS up to the date of which I am writing this. This CSS is an accurate repersentation of a GitHub repo (along with some components off of a GitHub Issue and a GitHub wiki page) with both light and dark modes. You can find the release <a href="https://artofproblemsolving.com/community/q1h2653472p22974236" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Github.css" target="_blank">here.</a></p>`
     }
 
@@ -88,7 +88,7 @@ function next(id, scroll=true){
                 break
 
             case 1:
-                typetitle($('#greencss h1'), 'Green.css', null, 100)
+                typetitle($('#green h1'), 'Green.css', null, 100)
                 break
 
             case 2:
@@ -124,9 +124,10 @@ function next(id, scroll=true){
 }
 // ===== Main =====
 jsonid = 2
-for (itemname in data){
+for (i in data){
+    itemname = data[i]
     $("#csses").append(`
-    <div id="${itemname}" style="--bg:${itemname.bg};color:${itemname.color};" class="panel">
+    <div id="${i}" style="--bg:${itemname.bg};color:${itemname.color};" class="panel">
         <svg class="arrowdown" height="22" width="40" onclick="next(${jsonid})">
             <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
         </svg>
