@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+        <!--
+  _    _            _                           
+ | |  | |          | |                          
+ | |__| | ___ _   _| |                          
+ |  __  |/ _ \ | | | |                          
+ | |  | |  __/ |_| |_|                          
+ |_|  |_|\___|\__, (_)                          
+               __/ |                            
+              |___/                             
+ __          ___           _                    
+ \ \        / / |         | |                   
+  \ \  /\  / /| |__   __ _| |_                  
+   \ \/  \/ / | '_ \ / _` | __|                 
+    \  /\  /  | | | | (_| | |_                  
+     \/  \/   |_| |_|\__,_|\__|                 
+                                                
+                                                
+                                                
+     /\                                         
+    /  \   _ __ ___                             
+   / /\ \ | '__/ _ \                            
+  / ____ \| | |  __/                            
+ /_/    \_\_|  \___|                            
+                                                
+                                                
+ __     __                                      
+ \ \   / /                                      
+  \ \_/ /__  _   _                              
+   \   / _ \| | | |                             
+    | | (_) | |_| |                             
+    |_|\___/ \__,_|                             
+                                                
+                                                
+  _____        _                                
+ |  __ \      (_)                               
+ | |  | | ___  _ _ __   __ _                    
+ | |  | |/ _ \| | '_ \ / _` |                   
+ | |__| | (_) | | | | | (_| |                   
+ |_____/ \___/|_|_| |_|\__, |                   
+                        __/ |                   
+                       |___/                    
+  _    _              ___                       
+ | |  | |            |__ \                      
+ | |__| | ___ _ __ ___  ) |                     
+ |  __  |/ _ \ '__/ _ \/ /                      
+ | |  | |  __/ | |  __/_|                       
+ |_|  |_|\___|_|  \___(_)                       
+                                                
+-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="https://actiniumn404.github.io">
+        <title>AoPS Blog CSS's by AndrewC10</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+            *{
+                box-sizing: border-box;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                margin:0;
+            }
+            #welcome, #end{
+                background: rgb(0,159,173);
+                background: -moz-linear-gradient(90deg, rgba(0,159,173,1) 45%, rgba(55,111,192,1) 75%, rgba(31,79,147,1) 100%);
+                background: -webkit-linear-gradient(90deg, rgba(0,159,173,1) 45%, rgba(55,111,192,1) 75%, rgba(31,79,147,1) 100%);
+                background: linear-gradient(90deg, rgba(0,159,173,1) 45%, rgba(55,111,192,1) 75%, rgba(31,79,147,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009fad",endColorstr="#1f4f93",GradientType=1);
+                width:100%;
+                height:100vh;
+            }
+            .panel{
+                width:100%;
+                display:inline-block;
+                height:100vh;
+                background-color: var(--bg);
+            }
+            #welcome h1{
+                --color:white;
+                color:white;
+                font-family: 'Comfortaa', cursive;
+                text-align: center;
+                font-size:48px;
+                position: absolute;
+                left:50%;
+                transform:translateX(-50%);
+                top:40vh;
+            }
+            #welcome h1 a{
+                color:rgb(224, 224, 224);
+                text-decoration: none;
+            }
+            :where(#welcome h1, .panel h1)::after{
+                content: "l";
+                display: inline-block;
+                width: 4px;
+                background: var(--color);
+                animation: flicker 1s infinite; 
+                line-height: 53px;
+                height: 53px;
+                color: transparent;
+                margin-left: 5px;
+                transition:none;
+            }
+            @keyframes flicker{
+                0%{background: var(--color);}
+                50%{background: transparent;}
+                100%{background: var(--color);}
+            }
+            @keyframes appear {
+                from{opacity: 0;}
+                to{opacity: 1;}
+            }
+            .arrowdown{
+                stroke:rgb(228, 228, 228);
+                position: absolute;
+                left:50%;
+                opacity:1;
+                transform:translate(-50%, calc(100vh - 60px));
+                animation: appear 2s 1; 
+                cursor: pointer;
+            }
+            .panel h1{
+                color:var(--color);
+                font-family: 'Comfortaa', cursive;
+                text-align: center;
+                font-size:48px;
+                text-align: center;
+                margin-top:40vh;
+            }
+            .panel p{
+                text-align: center;
+                font-size:24px;
+                margin-top:10px;
+                color:var(--color);
+            }
+            a{
+                color:var(--color);
+            }
+            #aboutbox{
+                position:fixed;
+                right:0px;
+                bottom:0px;
+                padding:5px;
+                background:white;
+                font-family: monospace;
+                width:200px;
+                transition:0.5s;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="welcome">
+            <svg class="arrowdown" height="22" width="40" onclick="next(1)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1 id="titletext"></h1>
+        </div>
+        <div id="greencss" style="--bg:gray;color:lime;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(2)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>Green.css is a nice, soothing CSS that is basically a green version of the default AoPS CSS. You can find the release <a href="https://artofproblemsolving.com/community/c66h2414540" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Green.css" target="_blank">here.</a></p>
+        </div>
+        <div id="wob" style="--bg:black;--color:rgb(156, 156, 156);" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(3)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>White on Black.css is a simple dark mode CSS. As the title suggests, the CSS mainly consists of white features on a black background, plus some additional "special effects". You can find the release <a href="https://artofproblemsolving.com/community/c66h2550454p21796896" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/White-on-black.css" target="_blank">here.</a></p>
+        </div>
+        <div id="unity" style="--bg:rgb(36 31 49);--color:rgb(173, 241, 236);" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(4)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>Unity.css was my first CSS designed after a webpage or software. It was designed after the <kbd>Unity Game Engine</kbd>. I would like to thank @Bachsonata3 for suggesting this in a DM, and @Happycupcake for multiple code snippets. This CSS features the navigation bar and title as the toolbar at the top of the unity software, the archives as the file navigator at the left of the screen, the shouts as the console, and the rest of the sidebar as the custimization options at the bottom right of the screen. You can find the release <a href="https://artofproblemsolving.com/community/c66h2414540" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Green.css" target="_blank">here.</a></p>
+        </div>
+        <div id="homework" style="--bg:#1b365d;--color:#009fad;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(5)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>AoPS Class Homework.css is based off of the homework page of an AoPS Classroom. Kudos to the pr0 CSS, AIME, Math, and Alcumus god @Zhaom <img src="https://artofproblemsolving.com/assets/images/smilies/notworthy.gif"> for some code snippets and overall helping me with the code. You can find the release <a href="https://artofproblemsolving.com/community/c66h2618824_release_aops_class_homeworkcss" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/AoPS%20Class%20Homework.css" target="_blank">here.</a></p>
+        </div>
+        <div id="zoom" style="--bg:rgb(44, 44, 44);--color:#2d8cff;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(6)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>Zoom.css is a CSS that is based off of the Zoom Meeting Software produced by Zoom Video Communications Inc. This features a flexbox repersentation of the posts as people in a zoom meeting, the contributors and shouts as the participants and chat windows to the right side of the screen respectively, and the rest of the sidebar with special hover effects as the menu bar at the bottom of the screen.  You can find the release <a href="https://artofproblemsolving.com/community/c66h2633778_release_zoomcss" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Zoom.css" target="_blank">here.</a></p>
+        </div>
+        <div id="gmail" style="--bg:#085832;--color:#ff5d5d;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(7)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>Gmail.css is probably one of my most accurate CSS's to this date. As you might guess from the title, Gmail.css is based off of the email service "Gmail" created by Google Inc. It features the navigation bar to the left side, and the posts as emails to the right. You can find the release <a href="https://artofproblemsolving.com/community/c66h2637511" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/gmail.css" target="_blank">here.</a></p>
+        </div>
+        <div id="khan" style="--bg:#0a2a66;--color:#14bf96;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(8)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>Khan Academy.css is a simple repersentation of the Khan Academy website. You can find the release <a href="https://artofproblemsolving.com/community/c66h2643820_release_khan_academycss" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/KhanAcademy.css" target="_blank">here.</a></p>
+        </div>
+        <div id="github" style="--bg:black;--color:white;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(9)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1></h1>
+            <p>Github.css is my most accurate CSS up to the date of which I am writing this. This CSS is an accurate repersentation of a GitHub repo (along with some components off of a GitHub Issue and a GitHub wiki page) with both light and dark modes. You can find the release <a href="https://artofproblemsolving.com/community/q1h2653472p22974236" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Github.css" target="_blank">here.</a></p>
+        </div>
+        <div id="end" style="--color:white;" class="panel">
+            <svg class="arrowdown" height="22" width="40" onclick="next(0)" style="transform: translate(-50%, calc(100vh - 60px)) rotate(180deg)">
+                <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
+            </svg>
+            <h1 style="font-weight: bolder;">The End</h1>
+            <p></p>
+        </div>
+        <div id="aboutbox">
+            Made by <a href="/" target="_blank">Actiniumn404</a> with &hearts; after many continuous hours of work. Please <a href="/contact" target="_blank">contact</a> me if you want to use this layout for your website.
+        </div>
+
+        <script defer>
+            currentgo = null
+            locations = ["welcome", "greencss", "wob", "unity", "homework", "zoom", "gmail", "khan", "github"]
+
+            function typetitle(emt,typertext, aftertext, speed){
+                emt.html("")
+                console.log(`Started typing "${typertext}" in the ${emt.parent().prop("id")} typewriter`)
+                charPos = 0
+                currentgo = emt.parent().prop("id")
+                i=setInterval(() => {
+                    if (currentgo !== emt.parent().prop("id")){
+                        charPos = typertext.length
+                        console.log(`Stopped ${emt.parent().prop("id")} because of outdated typewriter`)
+                    }
+                    if (charPos >= typertext.length){
+                        if (aftertext === null){
+                            aftertext = typertext
+                        }
+                        emt.html(aftertext)
+                        clearInterval(i)
+                    }
+                    emt.append(typertext[charPos])
+                    charPos++
+                }, speed);
+            }
+            
+            function next(id, scroll=true){
+                console.log(id)
+                if (scroll){
+                    window.scrollTo(0, id*window.innerHeight)
+                }
+                /*if (id === 0){
+                    window.scrollTo(0,0)
+                }*/
+                currentgo=null
+                setTimeout(()=>{
+                    if (id >= locations.length){
+                        typetitle($('#end p'), 'Thanks for reading', null, 100)
+                    }
+                    switch(id){
+                        case 0:
+                            typetitle($("#titletext"),"AoPS Blog CSS by Actiniumn404 (AoPS)", `AoPS Blog CSS by <a href="https://actiniumn404.github.io/">Actiniumn404</a> (<a href="https://artofproblemsolving.com/community/user/499928">AoPS</a>)`, 70)
+                            break
+
+                        case 1:
+                            typetitle($('#greencss h1'), 'Green.css', null, 100)
+                            break
+
+                        case 2:
+                            typetitle($('#wob h1'), 'White on Black.css', null, 100)
+                            break
+                        
+                        case 3:
+                            typetitle($('#unity h1'), 'Unity.css', null, 100)
+                            break
+
+                        case 4:
+                            typetitle($('#homework h1'), 'AoPS Class Homework.css', null, 100)
+                            break
+
+                        case 5: 
+                            typetitle($('#zoom h1'), "Zoom.css", null, 100)
+                            break
+                        
+                        case 6: 
+                            typetitle($('#gmail h1'), "Gmail.css", null, 100)
+                            break
+                            
+                        case 7: 
+                            typetitle($('#khan h1'), "Khan Academy.css", null, 100)
+                            break
+
+                        case 8: 
+                            typetitle($('#github h1'), "GitHub.css", null, 100)
+                            break
+
+                    }
+                }, 500)
+            }
+            // ===== Main =====
+            window.scrollTo(0,0)
+            typetitle($("#titletext"),"AoPS Blog CSS by Actiniumn404 (AoPS)", `AoPS Blog CSS by <a href="https://actiniumn404.github.io/" target="_blank">Actiniumn404</a> (<a href="https://artofproblemsolving.com/community/user/499928" target="_blank">AoPS</a>)`, 70)
+            if (window.location.hash !== ""){
+                if (!locations.includes(window.location.hash.substring(1))){
+                    next(0, false)
+                }else{
+                    next(locations.indexOf(window.location.hash.substring(1)), false)
+                }
+            }
+            window.onscroll = function(){
+                let s = window.scrollY
+                let t = window.innerHeight
+                let hash = locations.indexOf(window.location.hash.substring(1))
+                if (s >= 1 * t && s < t * (locations.length - 1)){
+                    $("#aboutbox").css("opacity", "0")
+                }
+                /*if (hash !== -1){
+                    if (s > t*(hash-1) && s < t*(hash+1)){
+                        $("#aboutbox").css("opacity", "0")
+                    }
+                }*/
+                else{
+                    $("#aboutbox").css("opacity", "1")
+                }
+            }
+        </script>
+    </body>
+</html>
