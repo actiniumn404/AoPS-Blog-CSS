@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+}
+#welcome, #end{
+    background: rgb(0,159,173);
+    background: -moz-linear-gradient(90deg, rgba(0,159,173,1) 45%, rgba(55,111,192,1) 75%, rgba(31,79,147,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0,159,173,1) 45%, rgba(55,111,192,1) 75%, rgba(31,79,147,1) 100%);
+    background: linear-gradient(90deg, rgba(0,159,173,1) 45%, rgba(55,111,192,1) 75%, rgba(31,79,147,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009fad",endColorstr="#1f4f93",GradientType=1);
+    width:100%;
+    height:100vh;
+}
+.panel{
+    width:100%;
+    display:inline-block;
+    height:100vh;
+    background-color: var(--bg);
+}
+#welcome h1{
+    --color:white;
+    color:white;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-size:48px;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:40vh;
+}
+#welcome h1 a{
+    color:rgb(224, 224, 224);
+    text-decoration: none;
+}
+:where(#welcome h1, .panel h1)::after{
+    content: "l";
+    display: inline-block;
+    width: 4px;
+    background: var(--color);
+    animation: flicker 1s infinite; 
+    line-height: 53px;
+    height: 53px;
+    color: transparent;
+    margin-left: 5px;
+    transition:none;
+}
+@keyframes flicker{
+    0%{background: var(--color);}
+    50%{background: transparent;}
+    100%{background: var(--color);}
+}
+@keyframes appear {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.arrowdown{
+    stroke:rgb(228, 228, 228);
+    position: absolute;
+    left:50%;
+    opacity:1;
+    transform:translate(-50%, calc(100vh - 60px));
+    animation: appear 2s 1; 
+    cursor: pointer;
+}
+.panel h1{
+    color:var(--color);
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-size:48px;
+    text-align: center;
+    margin-top:40vh;
+}
+.panel p{
+    text-align: center;
+    font-size:24px;
+    margin-top:10px;
+    color:var(--color);
+}
+a{
+    color:var(--color);
+}
+#aboutbox{
+    position:fixed;
+    right:0px;
+    bottom:0px;
+    padding:5px;
+    background:white;
+    font-family: monospace;
+    width:200px;
+    transition:0.5s;
+}
