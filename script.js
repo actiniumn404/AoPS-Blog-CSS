@@ -50,7 +50,7 @@ data = {
 
 
 currentgo = null
-locations = ["welcome", "greencss", "wob", "unity", "homework", "zoom", "gmail", "khan", "github"]
+locations = ["welcome", "greencss", "wob", "unity", "homework", "zoom", "gmail", "khan", "github", "stackoverflow"]
 
 function typetitle(emt,typertext, aftertext, speed){
     emt.html("")
