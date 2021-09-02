@@ -124,6 +124,10 @@ function next(id, scroll=true){
                 typetitle($('#github h1'), "GitHub.css", null, 100)
                 break
 
+            case 9:
+                typetitle($('#stackoverflow h1'), "Stack Overflow.css", null, 100)
+                break
+
         }
     }, 500)
 }
