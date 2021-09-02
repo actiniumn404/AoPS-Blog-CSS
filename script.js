@@ -38,7 +38,12 @@ data = {
     "github":{
         "bg":"black",
         "color":"white",
-        "info":`Github.css is my most accurate CSS up to the date of which I am writing this. This CSS is an accurate repersentation of a GitHub repo (along with some components off of a GitHub Issue and a GitHub wiki page) with both light and dark modes. You can find the release <a href="https://artofproblemsolving.com/community/q1h2653472p22974236" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Github.css" target="_blank">here.</a></p>`
+        "info":`Github.css is one my most accurate CSS up to the date of which I am writing this. This CSS is an accurate repersentation of a GitHub repo (along with some components off of a GitHub Issue and a GitHub wiki page) with both light and dark modes. You can find the release <a href="https://artofproblemsolving.com/community/q1h2653472p22974236" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Github.css" target="_blank">here.</a></p>`
+    },
+    "stackoverflow":{
+        "bg":"rgb(202 109 33)",
+        "color":"white",
+        "info":`Stack Overflow.css is one of my most accurate CSS's up to this date. This was a colaboration between AoPS Users Player01 and Forester2015. See more on the release page <a href="https://artofproblemsolving.com/community/c66h2662726_release_stackoverflowcss">here</a> and the code on the GitHub repo <a href="https://github.com/Blog-CSS/Blog-CSS.github.io/blob/main/Stackoverflow.css">here</a>`
     }
 
 }
@@ -127,7 +132,7 @@ jsonid = 2
 for (i in data){
     itemname = data[i]
     $("#csses").append(`
-    <div id="${i}" style="--bg:${itemname.bg};color:${itemname.color};" class="panel">
+    <div id="${i}" style="--bg:${itemname.bg};--color:${itemname.color};" class="panel">
         <svg class="arrowdown" height="22" width="40" onclick="next(${jsonid})">
             <path d="M 0 0 l 20 20 l 20 -20" stroke-width="3" fill="none"></path>
         </svg>
