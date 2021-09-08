@@ -44,13 +44,17 @@ data = {
         "bg":"rgb(202 109 33)",
         "color":"white",
         "info":`Stack Overflow.css is one of my most accurate CSS's up to this date. This was a colaboration between AoPS Users Player01 and Forester2015. See more on the release page <a href="https://artofproblemsolving.com/community/c66h2662726_release_stackoverflowcss">here</a> and the code on the GitHub repo <a href="https://github.com/Blog-CSS/Blog-CSS.github.io/blob/main/Stackoverflow.css">here</a>`
+    },
+    "reddit":{
+        "bg":"#982900",
+        "color":"#cccccc",
+        "info":"reddit.css is a colaboration between three AoPS Users, AndrewC10 (me), Sealsrock, and ihatemath123. Contrary to the title, CSS is a reddit <i>themed</i> CSS, not an exact copy of reddit. See more on the release page <a href='https://artofproblemsolving.com/community/c66h2666229_release_redditcss'>here</a> and the source code <a href='https://reddit.ihatemath123.repl.co/main.css'>here</a>`"
     }
-
 }
 
 
 currentgo = null
-locations = ["welcome", "greencss", "wob", "unity", "homework", "zoom", "gmail", "khan", "github", "stackoverflow"]
+locations = ["welcome", ...Object.keys(data)]
 
 function typetitle(emt,typertext, aftertext, speed){
     emt.html("")
@@ -126,6 +130,10 @@ function next(id, scroll=true){
 
             case 9:
                 typetitle($('#stackoverflow h1'), "Stack Overflow.css", null, 100)
+                break
+
+            case 10:
+                typetitle($('#reddit h1'), "reddit.css", null, 100)
                 break
 
         }
