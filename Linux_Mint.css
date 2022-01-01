@@ -642,6 +642,24 @@ pre[style="font-family:monospace;background-color: #f4f6f4;padding:10px;"],
 #navigation_box>div {
     color: transparent;
 }
+.comment{
+    background:none;
+    border-bottom:0 !important;
+
+}
+.commentwrap{
+    padding: 10px 15px!important;
+    background: #181818ba;
+}
+p.author{
+    font-size: 14px;
+}
+p.author a{
+    color:#bd4f17;
+}
+p.author img{
+    display:none;
+}
 
 @media screen and (max-width: 100vh) {
     #wrapper {
