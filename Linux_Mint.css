@@ -280,7 +280,7 @@ div#main>div {
 .archive-month strong::before {
     content: "";
     display: inline-block;
-    background-image: var(--folder-icon);
+    background-image: url("https://i.ibb.co/kDmtc9Q/image.png");
     background-size: 20.5px 16px;
     width: 20.5px;
     height: 16px;
