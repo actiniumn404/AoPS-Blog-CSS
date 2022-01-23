@@ -48,8 +48,13 @@ data = {
     "reddit":{
         "bg":"#982900",
         "color":"#cccccc",
-        "info":"reddit.css is a colaboration between three AoPS Users, AndrewC10 (me), Sealsrock, and ihatemath123. Contrary to the title, CSS is a reddit <i>themed</i> CSS, not an exact copy of reddit. See more on the release page <a href='https://artofproblemsolving.com/community/c66h2666229_release_redditcss'>here</a> and the source code <a href='https://reddit.ihatemath123.repl.co/main.css'>here</a>`"
-    }
+        "info":"reddit.css is a colaboration between three AoPS Users, AndrewC10 (me), Sealsrock, and ihatemath123. Contrary to the title, CSS is a reddit <i>themed</i> CSS, not an exact copy of reddit. See more on the release page <a href='https://artofproblemsolving.com/community/c66h2666229_release_redditcss'>here</a> and the source code <a href='https://reddit.ihatemath123.repl.co/main.css'>here</a>"
+    },
+    "Linux Mint":{
+        "bg":"#7F936B",
+        "color":"white",
+        "info":"Linux Mint.css is a one-of-the-kind blog CSS designed to immitate the Linux Mint OS. See more on the release page <a href='https://artofproblemsolving.com/community/c66h2747770_release_linux_mintcss'>here</a> and the source code <a href='https://actiniumn404.github.io/AoPS-Blog-CSS/Linux_Mint.css'>here</a>"
+    },
 }
 
 
