@@ -1,0 +1,959 @@
+/*
+ * Microsoft Teams by AndrewC10
+ * This is not affiliated in any way with the Microsoft Corporation
+ * You are more than welcome to use this
+ * This is licensed under the MIT License (See: https://github.com/actiniumn404/AoPS-Blog-CSS/blob/main/LICENSE)
+*/
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --theme: #444791;
+    --highlight: #5b5fc7;
+    --background: #f5f5f5;
+    --navbar-background: #ebebeb;
+    --navbar-color: #616161;
+    --aside-background: #f0f0f0;
+}
+
+body{
+    background: var(--background);
+    margin-left: 68px; /* for the navigation box */
+    margin-top: 48px; /* for the header */
+}
+
+#navigation_box{
+    border: 0;
+    background: var(--navbar-background);
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 68px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px 2px 0 2px;
+}
+
+#navigation_box > *{
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    height: -moz-fit-content;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#navigation_box a{
+    color: var(--navbar-color) !important;
+    font-size: 10px;
+    text-align: center;
+}
+
+#navigation_box a{
+    color: var(--navbar-color) !important;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* Since AoPS has FontAwesome, we should be able to use it */
+#navigation_box a::before{
+    font-weight: 900;
+    font-family: FontAwesome;
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left_navigation_box a:nth-child(1)::before{
+    content: "\f0ac";
+}
+
+#left_navigation_box a:nth-child(2)::before{
+    content: "\f02d";
+}
+
+#left_navigation_box a:nth-child(3)::before{
+    content: "\f0c6";
+}
+
+#left_navigation_box a:nth-child(4)::before{
+    content: "\f040";
+}
+
+#right_navigation_box a:nth-child(1)::before{
+    content: "\f0f3";
+}
+
+#right_navigation_box a:nth-child(2)::before{
+    content: "\f08b";
+}
+
+#right_navigation_box a:nth-child(3)::before{
+    content: "\f05a";
+}
+
+#left_navigation_box a:last-child{
+    color: var(--highlight) !important;
+    border-left: 2px solid var(--highlight);
+}
+
+#navigation_box a:hover{
+    background: var(--background);
+    color: var(--highlight) !important;
+}
+
+#header{
+    position: fixed;
+    height: 48px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background: var(--theme);
+    font-size: 14px;
+    z-index:3;
+}
+
+#header h1{
+    display: flex;
+    padding-left: 80px;
+    color: white;
+    font-size: 14px;
+    align-items: center;
+    height: 100%;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+    width: fit-content;
+}
+
+#header h1::after{
+    content: "\f107";
+    font-family: FontAwesome;
+    margin-left: 5px;
+}
+
+#wrapper{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#content{
+    width: calc(100% - 268px - 48px);
+    background: var(--background);
+    position: absolute;
+    right: 0;
+}
+
+#content > .clear{
+    display: none;
+    position: fixed;
+}
+
+#side{
+    order: -1;
+    background: var(--aside-background);
+    padding: 0;
+    height: calc(100vh - 48px);
+    overflow: auto;
+    position:fixed;
+    left: 68px;
+    z-index:3;
+}
+
+#main{
+    margin-bottom: 80px;
+    overflow: auto;
+    width: 100%;
+}
+
+#navigation_box::after{
+    content: "";
+    background: linear-gradient(to right,transparent,#aaa);
+    height: 100%;
+    width: 8px;
+    opacity: .2;
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+}
+
+#blog_keywords{
+    position: fixed;
+    height: 32px;
+    top: 8px;
+    z-index: 4;
+    width: calc((100vw - 220px) - 300px);
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--theme);
+    left: 330px;
+    border: none;
+    border-radius: 4px;
+    padding-left: 28px;
+    display: block !important;
+}
+
+#blog_keywords::placeholder{
+    color: var(--theme);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#search-widget::before{
+    content: "\f002";
+    font-family: FontAwesome;
+    color: var(--theme);
+    position: fixed;
+    top: 14px;
+    left: 338px;
+    z-index: 5;
+    font-size: 14px;
+}
+
+.avatar img{
+    position: fixed;
+    height: 32px;
+    width: auto;
+    right: 14px;
+    z-index: 4;
+    top: 8px;
+    background: white;
+    border-radius: 100%;
+}
+
+.avatar::before{
+    content: "\f058";
+    font-family: FontAwesome;
+    color: #7ca464;
+    position: fixed;
+    right: 10px;
+    top: 28px;
+    z-index: 5;
+    background: white;
+    border-radius: 100%;
+    font-size: 16px;
+    height: 16px;
+}
+
+#post-new-entry-p{
+    background: var(--highlight);
+    cursor: pointer;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 7px 20px;
+    border-radius: 4px;
+    box-shadow: 0 .2rem .4rem -.075rem rgba(0,0,0,.25);
+    position: fixed;
+    bottom: 20px;
+    --width: calc(100vw - 258px - 68px);
+    left: calc(248px + 68px + (var(--width) - min(0.75 * var(--width), 1000px)) / 2);
+    z-index:3;
+}
+
+#post-new-entry-p *{
+    color: white;
+}
+
+#post-new-entry-img{
+    display: none;
+}
+
+#post-new-entry{
+    font-size: 0;
+    display: flex;
+    align-items: center;
+}
+
+#post-new-entry::before{
+    font-size: 14px;
+    content: "\f044";
+    font-family: FontAwesome;
+    margin-right: 10px;
+}
+
+
+#post-new-entry::after{
+    font-size: 14px;
+    content: "New Conversation";
+    font-weight: 400;
+}
+
+#post-new-entry-p:hover{
+    background: #3d3e78;
+}
+
+.entry{
+    background: white;
+    border: 0 !important;
+    display: flex;
+    flex-direction: column;
+    width: min(75%, 1000px);
+    margin: auto;
+    padding-bottom: 0 !important;
+    box-shadow: 0 0 4px lightgray;
+}
+
+.entry h2{
+    order: -1;
+    padding: 5px 16px;
+    color: #424242;
+    font-size: 12px;
+}
+
+.comment .author{
+    color: #424252;
+    font-size: 12px;
+}
+
+
+.entry h2 a, .comment .author a{
+    color: black !important;
+    font-weight: 600;
+}
+
+.entry h1{
+    background: #cddaea;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px !important;
+}
+
+.entry h1 a{
+    color: #164279 !important;
+    font-size: 38px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.entry h2 img{
+    display: none;
+}
+
+.entrywrap{
+    background: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 16px 0 0 0 !important;
+}
+
+.entrywrap > *{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
+:is(.entry h2 strong a, #contrib-widget a)::before{
+    content: "";
+    background-size: 42px;
+    width: 42px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    background-color: white;
+    border-radius: 100%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/512px-Windows_10_Default_Profile_Picture.svg.png")
+}
+
+.entry h2 strong a::after{
+    content: "\f058";
+    font-family: FontAwesome;
+    color: #7ca464;
+    position: absolute;
+    top: 45px;
+    left: -20px;
+    z-index: 3;
+    background: white;
+    border-radius: 100%;
+    font-size: 16px;
+    height: 16px;
+}
+
+#left_navigation_box a:nth-child(1)::after{
+    content: "\f0c9";
+    font-weight: 900;
+    font-family: FontAwesome;
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: fixed;
+    z-index: 2;
+    top: 10px;
+    left: 25px;
+}
+
+.cmty-item-tag{
+    background: none !important;
+    color: #242424 !important;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+}
+
+.entry:has(.cmty-post-edit-info:not(:empty)) h2::after{
+    content: "Edited";
+    margin-left: 10px;
+}
+
+.cmty-post-edit-info{
+    display: none !important;
+}
+
+.message{
+    word-break: break-word;
+}
+
+.cmty-poll-display{
+    background: white;
+    border: 2px solid #f5f5f5;
+    border-top-color: rgb(0, 130, 114);
+    padding: 16px;
+}
+
+.cmty-poll-display-top{
+    color: rgb(32, 31, 31);
+    font-size: 14px;
+    font-style: normal;
+    text-transform: lowercase;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.cmty-poll-display-top::before{
+    content: "The author created a ";
+    text-transform: none;
+}
+.cmty-poll-display-top::after{
+    content: "Poll: Anonymous; Results shared";
+    text-transform: none;
+    margin-left: auto;
+    display: block;
+    color: rgb(72, 70, 68) !important;
+    font-size: 12px;
+}
+
+.cmty-poll-display-top span{
+    display: none;
+}
+
+.cmty-poll-question{
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cmty-poll-display-data{
+    margin: 0 !important;
+    width:  100%;
+}
+
+.cmty-poll-option input{
+    margin: 0 6px 0 10px !important;
+}
+
+.cmty-poll-option-text label{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    margin-bottom: 6px;
+
+}
+
+.cmty-poll-select-no-results{
+    margin: 0 !important;
+    text-align: left;
+}
+
+.cmty-poll-select-no-results *{
+    font-weight: normal;
+}
+
+.cmty-poll-vote-row input, .cmty-poll-results-toggle *{
+    background: none !important;
+    color: var(--highlight) !important;
+    font-weight: 600;
+    border: 1px solid #e2e2f6 !important;
+    padding: 3px 30px;
+    height: auto;
+    width: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+:is(.cmty-poll-vote-row input, .cmty-poll-results-toggle *):is(:hover, :active, :focus){
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+:is(.cmty-poll-vote-row input, .cmty-poll-results-toggle *):hover{
+    background: #e8ebfa !important;
+    border-color: #bdbde6 !important;
+    color: #3d3e78 !important;
+}
+
+:is(.cmty-poll-vote-row input, .cmty-poll-results-toggle *):active{
+    border-color: #bdbde6 !important;
+    background-color: #e2e2f6 !important;
+    color: #3d3e78 !important;
+}
+
+.cmty-poll-vote-row{
+    text-align: left;
+    width: fit-content;
+    margin: 0;
+    display: inline-block;
+}
+
+.cmty-poll-results-toggle *{
+    padding: 7px 30px;
+    font-size: 14px !important;
+    text-transform: uppercase;
+}
+
+.cmty-poll-results-toggle{
+    width: fit-content;
+    display: inline-block;
+    margin-left: auto;
+    /* I absolutely hate float, but it looks like we're going to have to use it here */
+    float: right;
+}
+
+.cmty-poll-helper-text{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.cmty-poll-result-bar{
+    background: #065448;
+    border-radius: 0 8px 8px 0;
+}
+
+#search-widget{
+    height: 0;
+    overflow: clip;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block;
+}
+
+.post-replies{
+    margin-right: auto;
+    display: block !important;
+    font-size: 12px;
+    text-decoration: none !important;
+    color: var(--highlight) !important;
+    padding: 5px 0;
+}
+
+.efooter{
+    background: var(--background);
+    border-top: 2px solid #ececec;
+}
+
+.cmty-tags-itembox-wrapper{
+    padding-bottom: 16px;
+}
+
+.post-comment{
+    font-size: 12px;
+    text-decoration: none !important;
+    color: #424242 !important;
+}
+
+.post-comment::before{
+    content: "\f112";
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+.month-image{
+    background-image: url("https://actiniumn404.github.io/AoPS-Blog-CSS/assets/teams_icon_1.jpeg");
+    background-size: 28px !important;
+    padding-left: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+.archive-month:nth-of-type(4n + 1) .month-image{
+    background-image: url("https://actiniumn404.github.io/AoPS-Blog-CSS/assets/teams_icon_1.jpeg") !important;
+}
+
+.archive-month:nth-of-type(4n + 2) .month-image{
+    background-image: url("https://actiniumn404.github.io/AoPS-Blog-CSS/assets/teams_icon_2.jpeg") !important;
+}
+
+.archive-month:nth-of-type(4n + 3) .month-image{
+    background-image: url("https://actiniumn404.github.io/AoPS-Blog-CSS/assets/teams_icon_3.jpeg") !important;
+}
+
+.archive-month:nth-of-type(4n + 4) .month-image{
+    background-image: url("https://actiniumn404.github.io/AoPS-Blog-CSS/assets/teams_icon_4.jpeg") !important;
+}
+
+.archive-month-header strong{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    column-gap: 8px;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 2px 10px;
+    margin: 5px 5px 0 5px;
+    user-select: none;
+}
+
+.archive-month-header :hover{
+    background: #fafafa;
+}
+
+.archive-row{
+    padding-left: 45px;
+    margin: 3px 5px;
+    text-indent: 0;
+}
+
+.archive-row a{
+    text-indent: 0;
+    color: rgb(97,97,97);
+    font-size: 14px;
+}
+.archive-row:hover{
+    background: #fafafa;
+    user-select: none;
+}
+
+.widget-title{
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#user-menu-widget .user-full{
+    position: fixed;
+    right: 60px;
+    top: 12px;
+    z-index: 3;
+    background: white;
+    padding: 2px 5px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+#user-menu-widget .user-full a{
+    color: black !important;
+    font-weight: 400;
+}
+
+#user-menu-widget .user-full a:hover{
+    text-decoration: underline;
+}
+
+#user-menu-widget{
+    height: 0;
+    padding: 0 !important;
+    margin: 0;
+    overflow: clip;
+}
+
+#side::after{
+    content: "";
+    background: linear-gradient(to right,transparent,#aaa);
+    height: 100%;
+    width: 8px;
+    opacity: .2;
+    left: calc(68px + 258px - 8px);
+    pointer-events: none;
+    display: block;
+    position: fixed;
+    z-index: 3;
+    top: 48px;
+}
+
+.blog-post-comment, .blog-num-comments{
+    display: none;
+}
+
+.comment{
+    margin: 0 !important;
+    border: 0 !important;
+    background: var(--background);
+}
+
+#main::after{
+     content: "";
+    height: 80px;
+    background: var(--background);
+    width: calc(100vw - 258px - 68px);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index:2;
+}
+
+#main > p:not(#post-new-entry-p){
+    display: none;
+}
+
+.commentwrap{
+    display: flex;
+    flex-direction: column;
+    padding-left: 65px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    padding-bottom: 5px !important;
+}
+
+.commentwrap .cfooter{
+    order: -1;
+}
+
+.cfooter img{
+    display: none;
+}
+
+.commentwrap > .cfooter strong a::before{
+    content: "";
+    background-size: 42px;
+    width: 42px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    z-index: inherit;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/512px-Windows_10_Default_Profile_Picture.svg.png");
+    transform: translate(-55px, -15px);
+}
+
+.blog-posts-box{
+    width: min(75%, 1000px);
+    margin: auto;
+    box-shadow: 0 .2rem .4rem -.075rem rgba(0,0,0,.25);
+    padding-bottom: 10px;
+}
+
+.blog-reply-window.cmty-reply-window:not(:has(*)){
+    display: none !important;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-reply-window.cmty-reply-window{
+    order: 100;
+    width: min(75%, 1000px);
+    margin: auto;
+}
+
+.modactions{
+    display: none;
+    position: absolute;
+    --width: calc(100vw - 258px - 68px);
+    right: calc(10px + (var(--width) - min(0.75 * var(--width), 1000px)) / 2);
+    z-index: 4;
+}
+
+.modactions ul{
+    display: flex !important;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 8px 16px rgba(0,0,0,.14);
+    padding: 0 !important;
+    overflow: clip;
+    height: 0;
+    background: white;
+}
+
+.modactions li{
+    font-size: 14px;
+    display: block;
+    padding: 6px 40px 6px 10px !important;
+    background: white;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.modactions li:hover{
+    background: whitesmoke
+}
+
+.modactions li a{
+    text-decoration: none !important;
+    color: rgb(66, 66, 66);
+    display: inline-flex !important;
+    align-items: center;
+    column-gap: 5px;
+    width: -webkit-fill-available;
+}
+
+.modactions::before{
+    margin-right: auto;
+    display: block;
+    content: "\f132";
+    font-family: FontAwesome;
+    font-size: 18px;
+}
+
+.modactions:hover ul{
+    height: auto !important;
+    text-align: left;
+    z-index: 5;
+}
+
+
+div.commentwrap{
+    position: static !important;
+}
+
+.comment:hover .modactions{
+    display: block;
+}
+
+:is(.blog-edit-post, .blog-delete-post, .blog-report-post)::before{
+    font-family: FontAwesome;
+    font-size: 18px;
+}
+
+.blog-edit-post::before{
+    content: "\f040";
+}
+
+.blog-delete-post::before{
+    content: "\f014";
+}
+
+.blog-report-post::before{
+    content: "\f071";
+}
+
+.efooter .modactions{
+    display: block;
+    right: 10px;
+}
+
+#contrib-widget .widget-content{
+    color: transparent;
+    font-size: 0;
+    padding-top: 10px;
+}
+
+#contrib-widget .widget-content a{
+    display: block;
+    font-size: 14px;
+    color: #242424;
+    padding-left: 55px;
+}
+
+#contrib-widget a::before{
+    left: auto;
+    top: auto;
+    transform: translate(-40px, -5px);
+    background-size: 32px;
+    height: 32px;
+    width: 32px;
+}
+
+#shouts-widget .widget-content, #message, #shout-helper, #side > div:not(.widget) .widget-content{
+    width: calc(258px - 48px);
+    margin-left: 16px;
+    overflow: auto;
+}
+
+#shouts-widget ul, #side > div:not(.widget) .cmty-itembox-inner-box.aops-scroll-content *:not(a):not(a *){
+    width: 100% !important;
+}
+
+#side > div:not(.widget) .cmty-itembox-inner-box.aops-scroll-content{
+    width: 170px;
+    overflow: auto;
+}
+
+.aops-scroll-bar{
+    display: none !important;
+}
+
+.description{
+    position: fixed;
+    background: var(--theme);
+    top: 36px;
+    left: 75px;
+    color: white;
+    z-index: 6;
+    padding: 5px;
+    border-radius: 4px;
+    display: none;
+}
+
+#wrapper:has(#header h1:hover) .description, .description:hover{
+    display: block;
+}
+
+
+@media (max-width: 900px){
+    #content{
+        width: calc(100% - 48px);
+    }
+    #side{
+        left: -268px;
+        transition: 1s;
+        z-index: 3;
+    }
+    #side::after{
+        left: 0;
+        transition: 1s;
+    }
+    #post-new-entry-p, .modactions{
+        --width: calc(100vw - 68px);
+        left: calc(48px + (var(--width) - min(0.75 * var(--width), 1000px)) / 2);
+    }
+
+    #main::after{
+        width: calc(100vw - 68px);
+    }
+
+    #side::before{
+        content: "»";
+        position: fixed;
+        top: 60px;
+        left: 66px;
+        font-size: 36px;
+        background: white;
+        padding: 10px;
+        border: 2px solid lightgray;
+        border-radius: 0 100% 100% 0;
+        cursor: pointer;
+        transition: 1s;
+        z-index: 2;
+    }
+
+    #side:hover{
+        left: 68px;
+    }
+
+    #side:hover::before{
+        left: -10px;
+    }
+
+    #side:hover::after{
+        left: calc(68px + 258px - 8px);
+    }
+}
