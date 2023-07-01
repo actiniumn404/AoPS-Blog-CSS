@@ -26,8 +26,8 @@ data = {
         "info":`Zoom.css is a CSS that is based off of the Zoom Meeting Software produced by Zoom Video Communications Inc. This features a flexbox repersentation of the posts as people in a zoom meeting, the contributors and shouts as the participants and chat windows to the right side of the screen respectively, and the rest of the sidebar with special hover effects as the menu bar at the bottom of the screen.  You can find the release <a href="https://artofproblemsolving.com/community/c66h2633778_release_zoomcss" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/Zoom.css" target="_blank">here.</a>`
     },
     "gmail":{
-        "bg":"#064628",
-        "color":"#ffc4c4",
+        "bg":"#DB4437",
+        "color":"white",
         "info":`Gmail.css is probably one of my most accurate CSS's to this date. As you might guess from the title, Gmail.css is based off of the email service "Gmail" created by Google Inc. It features the navigation bar to the left side, and the posts as emails to the right. You can find the release <a href="https://artofproblemsolving.com/community/c66h2637511" target="_blank">here,</a> and the code <a href="https://actiniumn404.github.io/AoPS-Blog-CSS/gmail.css" target="_blank">here.</a>`
     },
     "khan":{
