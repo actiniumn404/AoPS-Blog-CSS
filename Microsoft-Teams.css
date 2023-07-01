@@ -903,6 +903,10 @@ div.commentwrap{
     display: none;
 }
 
+.description:empty::before{
+    content: "This blog doesn't have a description.";
+}
+
 #wrapper:has(#header h1:hover) .description, .description:hover{
     display: block;
 }
