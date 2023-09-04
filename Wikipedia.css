@@ -647,6 +647,9 @@ a:hover{
     border: 0 !important;
 }
 
+.aops-scroll-bar, .cmty-itembox .cmty-topics-list-inner-box, .cmty-itembox-inner-box{
+    z-index: 9;
+}
 
 @media (max-width: 1300px){
     :root{
