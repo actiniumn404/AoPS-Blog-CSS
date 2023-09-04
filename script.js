@@ -60,6 +60,11 @@ data = {
         color: "white",
         info: "Microsoft Teams.css is a CSS designed to try and emulate the Microsoft Teams software! See more information on the <a href='https://artofproblemsolving.com/community/c66h3102053_release_microsoft_teamscss'>release page</a>, and find the code <a href='https://actiniumn404.github.io/AoPS-Blog-CSS/Microsoft-Teams.css'>here</a>"
     }
+    "Wikipedia": {
+        "bg": "#bababa",
+        "color": "black",
+        "info": "Wikipedia.css is a CSS designed to look like Wikipedia! I actually started this project 2 years before releasing it (you can see that the Linux Libertine font was uploaded to the GitHub repo 2 years ago), but picked it up as a final project before school started. More information can be found at the <a href='https://artofproblemsolving.com/community/c66h3148946_release_wikipediacss'>release.</a>"
+    }
 }
 
 
@@ -151,7 +156,9 @@ function next(id, scroll=true){
             case 12:
                 typetitle($("#MSTeams h1"), "Microsoft Teams.css", null, 100)
                 break
-
+            case 13:
+                typetitle($("Wikipedia h1"), "Wikipedia.css", null, 100)
+                break
         }
     }, 500)
 }
