@@ -59,7 +59,7 @@ data = {
         bg: "#464EB8",
         color: "white",
         info: "Microsoft Teams.css is a CSS designed to try and emulate the Microsoft Teams software! See more information on the <a href='https://artofproblemsolving.com/community/c66h3102053_release_microsoft_teamscss'>release page</a>, and find the code <a href='https://actiniumn404.github.io/AoPS-Blog-CSS/Microsoft-Teams.css'>here</a>"
-    }
+    },
     "Wikipedia": {
         "bg": "#bababa",
         "color": "black",
